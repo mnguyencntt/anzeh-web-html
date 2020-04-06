@@ -1,0 +1,2366 @@
+<!DOCTYPE html>
+<html class="">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Central Kitchen &amp; F&amp;B Supply Chain</title>
+
+    <link rel="shortcut icon" href="http://anzeh.com/images/icon/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon" href="http://anzeh.com/images/icon/favicon-32x32.png" type="image/png">
+    <link type="text/css" href="http://anzeh.com/franchise-dev/css/franchise-development.css" rel="stylesheet" />
+	
+    <style type="text/css">
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        font,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        nav,
+        button,
+        section,
+        header,
+        footer,
+        title {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            vertical-align: baseline;
+            background: transparent;
+        }
+        body {
+            font-size: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        textarea,
+        input,
+        select {
+            font-family: Helvetica, Arial, sans-serif;
+            box-sizing: border-box;
+        }
+        ol,
+        ul {
+            list-style: none;
+        }
+        blockquote,
+        q {
+            quotes: none;
+        }
+        ins {
+            text-decoration: none;
+        }
+        del {
+            text-decoration: line-through;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        a {
+            cursor: pointer;
+            text-decoration: none;
+        }
+        html,
+        body {
+            height: 100%;
+        }
+        body {
+            overflow-x: auto;
+            overflow-y: scroll;
+        }
+        .testStyles {
+            overflow-y: hidden;
+        }
+        .reset-button {
+            background: none;
+            border: 0;
+            outline: 0;
+            color: inherit;
+            /* cursor: default; */
+            
+            font: inherit;
+            line-height: normal;
+            overflow: visible;
+            padding: 0;
+            -webkit-appearance: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+        :focus {
+            outline: none;
+        }
+        .wixSiteProperties {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow: hidden;
+        }
+        .SITE_ROOT {
+            min-height: 100%;
+            position: relative;
+            margin: 0 auto;
+        }
+        .POPUPS_ROOT {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: auto;
+            overflow-y: scroll;
+            position: fixed;
+            z-index: 99999;
+        }
+        .POPUPS_ROOT.mobile {
+            z-index: 1005;
+            -webkit-overflow-scrolling: touch;
+        }
+        .POPUPS_WRAPPER {
+            position: relative;
+            overflow: hidden;
+        }
+        .POPUPS_WRAPPER > div {
+            /* page */
+            
+            margin: 0 auto;
+        }
+        .auto-generated-link {
+            color: inherit;
+        }
+        .warmup .hidden-on-warmup {
+            visibility: hidden;
+        }
+        html.device-phone body {
+            overflow-y: auto;
+        }
+        html.device-mobile-optimized.device-android {
+            margin-bottom: 1px;
+        }
+        html.device-mobile-optimized.blockSiteScrolling > body {
+            position: fixed;
+            width: 100%;
+        }
+        html.device-mobile-optimized.media-zoom-mode > body {
+            touch-action: manipulation;
+        }
+        html.device-mobile-optimized.media-zoom-mode > body > #SITE_CONTAINER {
+            height: 100%;
+            overflow: hidden;
+        }
+        html.device-mobile-optimized.media-zoom-mode > body > #SITE_CONTAINER > .noop {
+            height: 100%;
+        }
+        html.device-mobile-optimized.media-zoom-mode > body > #SITE_CONTAINER > .noop > .siteAspectsContainer {
+            height: 100%;
+            z-index: 1005;
+        }
+        .siteAspectsContainer {
+            position: absolute;
+            top: 0;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+        }
+        body.device-mobile-optimized {
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+        body.device-mobile-optimized.qa-mode {
+            overflow-y: auto;
+        }
+        body.device-mobile-optimized #SITE_CONTAINER {
+            width: 320px;
+            overflow-x: visible;
+            margin: 0 auto;
+            position: relative;
+        }
+        body.device-mobile-optimized > * {
+            max-width: 100% !important;
+        }
+        body.device-mobile-optimized .SITE_ROOT {
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+        body.device-mobile-non-optimized #SITE_CONTAINER >:not(.mobile-non-optimized-overflow) .SITE_ROOT {
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        body.device-mobile-non-optimized.fullScreenMode {
+            background-color: #5f6360;
+        }
+        body.device-mobile-non-optimized.fullScreenMode .SITE_ROOT,
+        body.device-mobile-non-optimized.fullScreenMode #SITE_BACKGROUND,
+        body.device-mobile-non-optimized.fullScreenMode #MOBILE_ACTIONS_MENU {
+            visibility: hidden;
+        }
+        body.fullScreenMode {
+            overflow-x: hidden !important;
+            overflow-y: hidden !important;
+        }
+        body.fullScreenMode.device-mobile-optimized #TINY_MENU {
+            opacity: 0;
+            pointer-events: none;
+        }
+        body.fullScreenMode-scrollable.device-mobile-optimized {
+            overflow-x: hidden !important;
+            overflow-y: auto !important;
+        }
+        body.fullScreenMode-scrollable.device-mobile-optimized .SITE_ROOT,
+        body.fullScreenMode-scrollable.device-mobile-optimized #masterPage {
+            overflow-x: hidden !important;
+            overflow-y: hidden !important;
+        }
+        body.fullScreenMode-scrollable.device-mobile-optimized #masterPage,
+        body.fullScreenMode-scrollable.device-mobile-optimized #SITE_BACKGROUND {
+            height: auto !important;
+        }
+        .fullScreenOverlay {
+            z-index: 1005;
+            position: fixed;
+            left: 0;
+            top: -60px;
+            right: 0;
+            bottom: 0;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            overflow-y: hidden;
+        }
+        .fullScreenOverlay > .fullScreenOverlayContent {
+            margin: 0 auto;
+            position: absolute;
+            right: 0;
+            top: 60px;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+        .mobile-actions-menu-wrapper {
+            z-index: 1000;
+        }
+        body[contenteditable] {
+            overflow-x: auto;
+            overflow-y: auto;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .italic {
+            font-style: italic;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+        .lineThrough {
+            text-decoration: line-through;
+        }
+        .singleLineText {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .alignLeft {
+            text-align: left;
+        }
+        .alignCenter {
+            text-align: center;
+        }
+        .alignRight {
+            text-align: right;
+        }
+        .alignJustify {
+            text-align: justify;
+        }
+        ul.font_100,
+        ol.font_100 {
+            color: #080808;
+            font-family: 'Arial, Helvetica, sans-serif', serif;
+            font-size: 10px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: normal;
+            margin: 0;
+            text-decoration: none;
+            line-height: normal;
+            letter-spacing: normal;
+        }
+        ul.font_100 li,
+        ol.font_100 li {
+            margin-bottom: 12px;
+        }
+        letter {
+            position: relative;
+            display: inline-block;
+        }
+        word {
+            display: inline-block;
+            white-space: nowrap;
+        }
+        word.space,
+        letter.space {
+            display: inline;
+        }
+        ol.wix-list-text-align,
+        ul.wix-list-text-align {
+            list-style-position: inside;
+        }
+        ol.wix-list-text-align p,
+        ol.wix-list-text-align h1,
+        ol.wix-list-text-align h2,
+        ol.wix-list-text-align h3,
+        ol.wix-list-text-align h4,
+        ol.wix-list-text-align h5,
+        ol.wix-list-text-align h6,
+        ul.wix-list-text-align p,
+        ul.wix-list-text-align h1,
+        ul.wix-list-text-align h2,
+        ul.wix-list-text-align h3,
+        ul.wix-list-text-align h4,
+        ul.wix-list-text-align h5,
+        ul.wix-list-text-align h6 {
+            display: inline;
+        }
+        .wixapps-less-spacers-align.ltr {
+            text-align: left;
+        }
+        .wixapps-less-spacers-align.center {
+            text-align: center;
+        }
+        .wixapps-less-spacers-align.rtl {
+            text-align: right;
+        }
+        .wixapps-less-spacers-align > div,
+        .wixapps-less-spacers-align > a {
+            display: inline-block !important;
+        }
+        .flex_display {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+        }
+        .flex_vbox {
+            box-sizing: border-box;
+            padding-top: 0.01em;
+            padding-bottom: 0.01em;
+        }
+        a.wixAppsLink img {
+            cursor: pointer;
+        }
+        .singleLine {
+            white-space: nowrap;
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-wrap: normal;
+        }
+        [data-z-counter] {
+            z-index: 0;
+        }
+        [data-z-counter="0"] {
+            z-index: auto;
+        }
+        .circle-preloader {
+            -webkit-animation: semi-rotate 1s 1ms linear infinite;
+            animation: semi-rotate 1s 1ms linear infinite;
+            height: 30px;
+            left: 50%;
+            margin-left: -15px;
+            margin-top: -15px;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+            width: 15px;
+        }
+        .circle-preloader::before {
+            content: '';
+            top: 0;
+            left: 0;
+            right: -100%;
+            bottom: 0;
+            border: 3px solid currentColor;
+            border-color: currentColor transparent transparent currentColor;
+            border-radius: 50%;
+            position: absolute;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            -webkit-animation: inner-rotate 0.5s 1ms linear infinite alternate;
+            animation: inner-rotate 0.5s 1ms linear infinite alternate;
+            color: #7fccf7;
+        }
+        .circle-preloader::after {
+            content: '';
+            top: 0;
+            left: 0;
+            right: -100%;
+            bottom: 0;
+            border: 3px solid currentColor;
+            border-color: currentColor transparent transparent currentColor;
+            border-radius: 50%;
+            position: absolute;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            -webkit-animation: inner-rotate 0.5s 1ms linear infinite alternate;
+            animation: inner-rotate 0.5s 1ms linear infinite alternate;
+            color: #3899ec;
+            opacity: 0;
+        }
+        .circle-preloader.white::before {
+            color: #f0f0f0;
+        }
+        .circle-preloader.white::after {
+            color: #dcdcdc;
+        }
+        @-webkit-keyframes inner-rotate {
+            to {
+                opacity: 1;
+                -webkit-transform: rotate(115deg);
+                transform: rotate(115deg);
+            }
+        }
+        @keyframes inner-rotate {
+            to {
+                opacity: 1;
+                -webkit-transform: rotate(115deg);
+                transform: rotate(115deg);
+            }
+        }
+        @-webkit-keyframes semi-rotate {
+            from {
+                -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+            45% {
+                -webkit-transform: rotate(198deg);
+                transform: rotate(198deg);
+            }
+            55% {
+                -webkit-transform: rotate(234deg);
+                transform: rotate(234deg);
+            }
+            to {
+                -webkit-transform: rotate(540deg);
+                transform: rotate(540deg);
+            }
+        }
+        @keyframes semi-rotate {
+            from {
+                -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+            45% {
+                -webkit-transform: rotate(198deg);
+                transform: rotate(198deg);
+            }
+            55% {
+                -webkit-transform: rotate(234deg);
+                transform: rotate(234deg);
+            }
+            to {
+                -webkit-transform: rotate(540deg);
+                transform: rotate(540deg);
+            }
+        }
+        .hidden-comp-ghost-mode {
+            opacity: 0.5;
+        }
+        .collapsed-comp-mode::after {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            content: '';
+            background: -webkit-repeating-linear-gradient(135deg, transparent, transparent 49%, #2b5672 40%, #2b5672 40%, transparent 51%);
+            background: repeating-linear-gradient(-45deg, transparent, transparent 49%, #2b5672 40%, #2b5672 40%, transparent 51%);
+            background-size: 6px 6px;
+            background-repeat: repeat;
+        }
+        .g-transparent-a:link,
+        .g-transparent-a:visited {
+            border-color: transparent;
+        }
+        .transitioning-comp * {
+            transition: inherit !important;
+            -webkit-transition: inherit !important;
+        }
+        .selectionSharerContainer {
+            position: absolute;
+            background-color: #ffffff;
+            box-shadow: 0px 4px 10px 0px rgba(57, 86, 113, 0.24);
+            width: 142px;
+            height: 45px;
+            border-radius: 100px;
+            text-align: center;
+        }
+        .selectionSharerContainer:after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 42%;
+            /*controls horizontal position */
+            
+            border-width: 10px 10px 0;
+            /* vary these values to change the angle of the vertex */
+            
+            border-style: solid;
+            border-color: #ffffff transparent;
+            /* reduce the damage in FF3.0 */
+            
+            display: block;
+            width: 0;
+        }
+        .selectionSharerContainer .selectionSharerOption {
+            display: inline-block;
+            cursor: pointer;
+            vertical-align: top;
+            padding: 13px 11px 11px 13px;
+            margin: 1px;
+            z-index: -1;
+        }
+        .selectionSharerContainer .selectionSharerVerticalSeparator {
+            margin-top: 9px;
+            margin-bottom: 18px;
+            background-color: #eaf7ff;
+            height: 26px;
+            width: 1px;
+            display: inline-block;
+        }
+        .visual-focus-on:not(.has-custom-focus):focus {
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.9), 0 0 1px 2px #3899EC !important;
+        }
+        /*# sourceMappingURL=viewer.css.map */
+    </style>
+</head>
+
+<body class="" style="">
+    <div id="SITE_CONTAINER" data-santa-render-status="CLIENT">
+        <div class="noop" data-santa-version="1.2442.26" data-reactid=".0">
+            <div data-reactid=".0.0">
+                <style type="text/css" data-styleid="theme_fonts" data-reactid=".0.0.$fontsStyleNode">
+                    .font_0 {
+                        font: normal normal normal 29px/1.4em georgia, palatino, 'book antiqua', 'palatino linotype', serif;
+                        color: #000000;
+                    }
+                    .font_1 {
+                        font: normal normal normal 14px/1.4em helvetica-w01-roman, helvetica-w02-roman, helvetica-lt-w10-roman, sans-serif;
+                        color: #000000;
+                    }
+                    .font_2 {
+                        font: normal normal normal 55px/1.4em georgia, palatino, 'book antiqua', 'palatino linotype', serif;
+                        color: #000000;
+                    }
+                    .font_3 {
+                        font: normal normal normal 80px/1.4em georgia, palatino, 'book antiqua', 'palatino linotype', serif;
+                        color: #000000;
+                    }
+                    .font_4 {
+                        font: normal normal normal 60px/1.4em georgia, palatino, 'book antiqua', 'palatino linotype', serif;
+                        color: #000000;
+                    }
+                    .font_5 {
+                        font: normal normal normal 29px/1.4em georgia, palatino, 'book antiqua', 'palatino linotype', serif;
+                        color: #000000;
+                    }
+                    .font_6 {
+                        font: normal normal normal 22px/1.4em georgia, palatino, 'book antiqua', 'palatino linotype', serif;
+                        color: #000000;
+                    }
+                    .font_7 {
+                        font: normal normal normal 20px/1.4em georgia, palatino, 'book antiqua', 'palatino linotype', serif;
+                        color: #000000;
+                    }
+                    .font_8 {
+                        font: normal normal normal 16px/1.4em georgia, palatino, 'book antiqua', 'palatino linotype', serif;
+                        color: #000000;
+                    }
+                    .font_9 {
+                        font: normal normal normal 18px/1.4em helvetica-w01-light, helvetica-w02-light, sans-serif;
+                        color: #000000;
+                    }
+                    .font_10 {
+                        font: normal normal normal 14px/1.4em din-next-w01-light, din-next-w02-light, din-next-w10-light, sans-serif;
+                        color: #000000;
+                    }
+                </style>
+                <style type="text/css" data-styleid="theme_colors" data-reactid=".0.0.$colorsStyleNode">
+                    .color_0 {
+                        color: #FFFFFF;
+                    }
+                    .backcolor_0 {
+                        background-color: #FFFFFF;
+                    }
+                    .color_1 {
+                        color: #FFFFFF;
+                    }
+                    .backcolor_1 {
+                        background-color: #FFFFFF;
+                    }
+                    .color_2 {
+                        color: #000000;
+                    }
+                    .backcolor_2 {
+                        background-color: #000000;
+                    }
+                    .color_3 {
+                        color: #ED1C24;
+                    }
+                    .backcolor_3 {
+                        background-color: #ED1C24;
+                    }
+                    .color_4 {
+                        color: #0088CB;
+                    }
+                    .backcolor_4 {
+                        background-color: #0088CB;
+                    }
+                    .color_5 {
+                        color: #FFCB05;
+                    }
+                    .backcolor_5 {
+                        background-color: #FFCB05;
+                    }
+                    .color_6 {
+                        color: #727272;
+                    }
+                    .backcolor_6 {
+                        background-color: #727272;
+                    }
+                    .color_7 {
+                        color: #B0B0B0;
+                    }
+                    .backcolor_7 {
+                        background-color: #B0B0B0;
+                    }
+                    .color_8 {
+                        color: #FFFFFF;
+                    }
+                    .backcolor_8 {
+                        background-color: #FFFFFF;
+                    }
+                    .color_9 {
+                        color: #727272;
+                    }
+                    .backcolor_9 {
+                        background-color: #727272;
+                    }
+                    .color_10 {
+                        color: #B0B0B0;
+                    }
+                    .backcolor_10 {
+                        background-color: #B0B0B0;
+                    }
+                    .color_11 {
+                        color: #FFFFFF;
+                    }
+                    .backcolor_11 {
+                        background-color: #FFFFFF;
+                    }
+                    .color_12 {
+                        color: #BFBFBF;
+                    }
+                    .backcolor_12 {
+                        background-color: #BFBFBF;
+                    }
+                    .color_13 {
+                        color: #808080;
+                    }
+                    .backcolor_13 {
+                        background-color: #808080;
+                    }
+                    .color_14 {
+                        color: #404040;
+                    }
+                    .backcolor_14 {
+                        background-color: #404040;
+                    }
+                    .color_15 {
+                        color: #000000;
+                    }
+                    .backcolor_15 {
+                        background-color: #000000;
+                    }
+                    .color_16 {
+                        color: #F3C5A9;
+                    }
+                    .backcolor_16 {
+                        background-color: #F3C5A9;
+                    }
+                    .color_17 {
+                        color: #E8A67D;
+                    }
+                    .backcolor_17 {
+                        background-color: #E8A67D;
+                    }
+                    .color_18 {
+                        color: #E75101;
+                    }
+                    .backcolor_18 {
+                        background-color: #E75101;
+                    }
+                    .color_19 {
+                        color: #933F0B;
+                    }
+                    .backcolor_19 {
+                        background-color: #933F0B;
+                    }
+                    .color_20 {
+                        color: #491F05;
+                    }
+                    .backcolor_20 {
+                        background-color: #491F05;
+                    }
+                    .color_21 {
+                        color: #BDD4D6;
+                    }
+                    .backcolor_21 {
+                        background-color: #BDD4D6;
+                    }
+                    .color_22 {
+                        color: #8FABAD;
+                    }
+                    .backcolor_22 {
+                        background-color: #8FABAD;
+                    }
+                    .color_23 {
+                        color: #578284;
+                    }
+                    .backcolor_23 {
+                        background-color: #578284;
+                    }
+                    .color_24 {
+                        color: #3A5658;
+                    }
+                    .backcolor_24 {
+                        background-color: #3A5658;
+                    }
+                    .color_25 {
+                        color: #1D2B2C;
+                    }
+                    .backcolor_25 {
+                        background-color: #1D2B2C;
+                    }
+                    .color_26 {
+                        color: #FDDFA9;
+                    }
+                    .backcolor_26 {
+                        background-color: #FDDFA9;
+                    }
+                    .color_27 {
+                        color: #FBCE7E;
+                    }
+                    .backcolor_27 {
+                        background-color: #FBCE7E;
+                    }
+                    .color_28 {
+                        color: #F9A000;
+                    }
+                    .backcolor_28 {
+                        background-color: #F9A000;
+                    }
+                    .color_29 {
+                        color: #A66B00;
+                    }
+                    .backcolor_29 {
+                        background-color: #A66B00;
+                    }
+                    .color_30 {
+                        color: #533500;
+                    }
+                    .backcolor_30 {
+                        background-color: #533500;
+                    }
+                    .color_31 {
+                        color: #F7A4A4;
+                    }
+                    .backcolor_31 {
+                        background-color: #F7A4A4;
+                    }
+                    .color_32 {
+                        color: #EE7777;
+                    }
+                    .backcolor_32 {
+                        background-color: #EE7777;
+                    }
+                    .color_33 {
+                        color: #E60000;
+                    }
+                    .backcolor_33 {
+                        background-color: #E60000;
+                    }
+                    .color_34 {
+                        color: #990000;
+                    }
+                    .backcolor_34 {
+                        background-color: #990000;
+                    }
+                    .color_35 {
+                        color: #4D0000;
+                    }
+                    .backcolor_35 {
+                        background-color: #4D0000;
+                    }
+                </style>
+                <style type="text/css" data-styleid="s_DtaksTPAWidgetSkin" data-reactid=".0.0.$s_DtaksTPAWidgetSkin">
+                    .s_DtaksTPAWidgetSkin {
+                        overflow: hidden;
+                    }
+                    .s_DtaksTPAWidgetSkin iframe {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        overflow: hidden;
+                    }
+                    .s_DtaksTPAWidgetSkinpreloaderOverlay {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        color: #373737;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .s_DtaksTPAWidgetSkinpreloaderOverlaycontent {
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .s_DtaksTPAWidgetSkinunavailableMessageOverlay {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        color: #373737;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .s_DtaksTPAWidgetSkinunavailableMessageOverlaycontent {
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(255, 255, 255, 0.9);
+                        font-size: 0;
+                        margin-top: 5px;
+                    }
+                    .s_DtaksTPAWidgetSkinunavailableMessageOverlaytextContainer {
+                        color: #373737;
+                        font-family: "Helvetica Neue", "HelveticaNeueW01-55Roma", "HelveticaNeueW02-55Roma", "HelveticaNeueW10-55Roma", Helvetica, Arial, sans-serif;
+                        font-size: 14px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: 100%;
+                        margin-top: 10px;
+                        text-align: center;
+                    }
+                    .s_DtaksTPAWidgetSkinunavailableMessageOverlay a {
+                        color: #0099FF;
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                    .s_DtaksTPAWidgetSkinunavailableMessageOverlayiconContainer {
+                        display: none;
+                    }
+                    .s_DtaksTPAWidgetSkinunavailableMessageOverlaydismissButton {
+                        display: none;
+                    }
+                    .s_DtaksTPAWidgetSkinunavailableMessageOverlaytextTitle {
+                        font-family: "Helvetica Neue", "HelveticaNeueW01-55Roma", "HelveticaNeueW02-55Roma", "HelveticaNeueW10-55Roma", Helvetica, Arial, sans-serif;
+                        display: none;
+                    }
+                    .s_DtaksTPAWidgetSkinunavailableMessageOverlay[data-state~="hideIframe"] .s_DtaksTPAWidgetSkinunavailableMessageOverlay_buttons {
+                        opacity: 1;
+                    }
+                    .s_DtaksTPAWidgetSkinunavailableMessageOverlay[data-state~="hideOverlay"] {
+                        display: none;
+                    }
+                </style>
+                <style type="text/css" data-styleid="style-if584y9h" data-reactid=".0.0.$style-if584y9h">
+                    .style-if584y9hscreenWidthBackground {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                    }
+                    .style-if584y9h[data-state~="mobileView"] {
+                        position: absolute !important;
+                    }
+                    .style-if584y9h[data-state~="fixedPosition"] {
+                        position: fixed !important;
+                        left: auto !important;
+                        z-index: 50;
+                    }
+                    .style-if584y9h[data-state~="fixedPosition"].style-if584y9h_footer {
+                        top: auto;
+                        bottom: 0;
+                    }
+                    .style-if584y9h_bg {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        background-color: rgba(255, 255, 255, 1);
+                        border-top: 0px solid rgba(0, 0, 0, 1);
+                        border-bottom: 0px solid rgba(0, 0, 0, 1);
+                    }
+                    .style-if584y9h[data-state~="mobileView"] .style-if584y9hbg {
+                        left: 10px;
+                        right: 10px;
+                    }
+                    .style-if584y9hbg {
+                        position: absolute;
+                        top: 0px;
+                        right: 0;
+                        bottom: 0px;
+                        left: 0;
+                        background-color: rgba(255, 255, 255, 1);
+                        border-radius: 0;
+                    }
+                    .style-if584y9hinlineContent {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                    }
+                    .style-if584y9hcenteredContent {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                    }
+                </style>
+                <style type="text/css" data-styleid="s_BIwzIGroupSkin" data-reactid=".0.0.$s_BIwzIGroupSkin">
+                    .s_BIwzIGroupSkin {
+                        pointer-events: none;
+                    }
+                    .s_BIwzIGroupSkin_ie10 {
+                        max-width: 0;
+                        max-height: 0;
+                    }
+                    .s_BIwzIGroupSkininlineContent {
+                        pointer-events: all;
+                    }
+                </style>
+                <style type="text/css" data-styleid="style-ivvwqr5j" data-reactid=".0.0.$style-ivvwqr5j">
+                    .style-ivvwqr5jitemsContainer {
+                        width: calc(100% - 0px);
+                        height: calc(100% - 0px);
+                        white-space: nowrap;
+                        display: inline-block;
+                        overflow: visible;
+                        position: relative;
+                    }
+                    .style-ivvwqr5jmoreContainer {
+                        overflow: visible;
+                        display: inherit;
+                        white-space: nowrap;
+                        width: auto;
+                        background-color: rgba(255, 255, 255, 0.95);
+                        border-radius: 0;
+                    }
+                    .style-ivvwqr5jdropWrapper {
+                        z-index: 99999;
+                        display: block;
+                        opacity: 1;
+                        visibility: hidden;
+                        position: absolute;
+                        margin-top: 7px;
+                    }
+                    .style-ivvwqr5jdropWrapper[data-dropMode="dropUp"] {
+                        margin-top: 0;
+                        margin-bottom: 7px;
+                    }
+                    .style-ivvwqr5jrepeaterButton {
+                        height: 100%;
+                        position: relative;
+                        box-sizing: border-box;
+                        display: inline-block;
+                        cursor: pointer;
+                        font: normal normal normal 14px/1.4em helvetica-w01-roman, helvetica-w02-roman, helvetica-lt-w10-roman, sans-serif;
+                    }
+                    .style-ivvwqr5jrepeaterButton[data-state~="header"] a,
+                    .style-ivvwqr5jrepeaterButton[data-state~="header"] div {
+                        cursor: default !important;
+                    }
+                    .style-ivvwqr5jrepeaterButtonlinkElement {
+                        display: inline-block;
+                        height: 100%;
+                        width: 100%;
+                    }
+                    .style-ivvwqr5jrepeaterButton_gapper {
+                        padding: 0 5px;
+                    }
+                    .style-ivvwqr5jrepeaterButtonlabel {
+                        display: inline-block;
+                        padding: 0 10px;
+                        color: #000000;
+                        transition: color 0.4s ease 0s;
+                    }
+                    .style-ivvwqr5jrepeaterButton[data-state~="drop"] {
+                        width: 100%;
+                        display: block;
+                    }
+                    .style-ivvwqr5jrepeaterButton[data-state~="drop"] .style-ivvwqr5jrepeaterButtonlabel {
+                        padding: 0 .5em;
+                    }
+                    .style-ivvwqr5jrepeaterButton[data-state~="over"] .style-ivvwqr5jrepeaterButtonlabel {
+                        color: #578284;
+                        transition: color 0.4s ease 0s;
+                    }
+                    .style-ivvwqr5jrepeaterButton[data-state~="selected"] .style-ivvwqr5jrepeaterButtonlabel {
+                        color: #578284;
+                        transition: color 0.4s ease 0s;
+                    }
+                </style>
+                <style type="text/css" data-styleid="style-if5d6fkk3" data-reactid=".0.0.$style-if5d6fkk3">
+                    .style-if5d6fkk3_zoomedin {
+                        cursor: url(https://static.parastorage.com/services/skins/2.1229.72/images/wysiwyg/core/themes/base/cursor_zoom_out.png), url(https://static.parastorage.com/services/skins/2.1229.72/images/wysiwyg/core/themes/base/cursor_zoom_out.cur), auto;
+                        overflow: hidden;
+                        display: block;
+                    }
+                    .style-if5d6fkk3_zoomedout {
+                        cursor: url(https://static.parastorage.com/services/skins/2.1229.72/images/wysiwyg/core/themes/base/cursor_zoom_in.png), url(https://static.parastorage.com/services/skins/2.1229.72/images/wysiwyg/core/themes/base/cursor_zoom_in.cur), auto;
+                    }
+                    .style-if5d6fkk3link {
+                        display: block;
+                        overflow: hidden;
+                    }
+                    .style-if5d6fkk3img {
+                        overflow: hidden;
+                    }
+                    .style-if5d6fkk3imgimage {
+                        position: static;
+                        box-shadow: #000 0 0 0;
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+                    }
+                </style>
+                <style type="text/css" data-styleid="lb1" data-reactid=".0.0.$lb1">
+                    .lb1itemsContainer {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        white-space: nowrap;
+                    }
+                    .lb1itemsContainer > li:last-child {
+                        margin: 0 !important;
+                    }
+                    .lb1[data-state~="mobileView"] .lb1itemsContainer {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        white-space: normal;
+                    }
+                    .lb1 a {
+                        display: block;
+                        height: 100%;
+                    }
+                    .lb1imageItemlink {
+                        cursor: pointer;
+                    }
+                    .lb1imageItemimageimage {
+                        position: static;
+                        box-shadow: #000 0 0 0;
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+                    }
+                </style>
+                <style type="text/css" data-styleid="style-iwyif1qn" data-reactid=".0.0.$style-iwyif1qn">
+                    .style-iwyif1qnscreenWidthBackground {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                    }
+                    .style-iwyif1qn[data-state~="mobileView"] {
+                        position: absolute !important;
+                    }
+                    .style-iwyif1qn[data-state~="fixedPosition"] {
+                        position: fixed !important;
+                        left: auto !important;
+                        z-index: 50;
+                    }
+                    .style-iwyif1qn[data-state~="fixedPosition"].style-iwyif1qn_footer {
+                        top: auto;
+                        bottom: 0;
+                    }
+                    .style-iwyif1qn_bg {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        background-color: rgba(255, 255, 255, 0.6);
+                        border-top: 0px solid rgba(47, 46, 46, 1);
+                        border-bottom: 0px solid rgba(47, 46, 46, 1);
+                    }
+                    .style-iwyif1qn[data-state~="mobileView"] .style-iwyif1qnbg {
+                        left: 10px;
+                        right: 10px;
+                    }
+                    .style-iwyif1qnbg {
+                        position: absolute;
+                        top: 0px;
+                        right: 0;
+                        bottom: 0px;
+                        left: 0;
+                        background-color: transparent;
+                        border-radius: 0;
+                    }
+                    .style-iwyif1qninlineContent {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                    }
+                    .style-iwyif1qncenteredContent {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                    }
+                </style>
+                <style type="text/css" data-styleid="txtNew" data-reactid=".0.0.$txtNew">
+                    .txtNew {
+                        word-wrap: break-word;
+                    }
+                    .txtNew_override-left * {
+                        text-align: left !important;
+                    }
+                    .txtNew_override-right * {
+                        text-align: right !important;
+                    }
+                    .txtNew_override-center * {
+                        text-align: center !important;
+                    }
+                    .txtNew_override-justify * {
+                        text-align: justify !important;
+                    }
+                    .txtNew li {
+                        font-style: inherit;
+                        font-weight: inherit;
+                        line-height: inherit;
+                        letter-spacing: normal;
+                    }
+                    .txtNew ol,
+                    .txtNew ul {
+                        padding-left: 1.3em;
+                        padding-right: 0;
+                        margin-left: 0.5em;
+                        margin-right: 0;
+                        line-height: normal;
+                        letter-spacing: normal;
+                    }
+                    .txtNew ul {
+                        list-style-type: disc;
+                    }
+                    .txtNew ol {
+                        list-style-type: decimal;
+                    }
+                    .txtNew ul ul,
+                    .txtNew ol ul {
+                        list-style-type: circle;
+                    }
+                    .txtNew ul ul ul,
+                    .txtNew ol ul ul {
+                        list-style-type: square;
+                    }
+                    .txtNew ul ol ul,
+                    .txtNew ol ol ul {
+                        list-style-type: square;
+                    }
+                    .txtNew ul[dir="rtl"],
+                    .txtNew ol[dir="rtl"] {
+                        padding-left: 0;
+                        padding-right: 1.3em;
+                        margin-left: 0;
+                        margin-right: 0.5em;
+                    }
+                    .txtNew ul[dir="rtl"] ul,
+                    .txtNew ul[dir="rtl"] ol,
+                    .txtNew ol[dir="rtl"] ul,
+                    .txtNew ol[dir="rtl"] ol {
+                        padding-left: 0;
+                        padding-right: 1.3em;
+                        margin-left: 0;
+                        margin-right: 0.5em;
+                    }
+                    .txtNew p {
+                        margin: 0;
+                        line-height: normal;
+                        letter-spacing: normal;
+                    }
+                    .txtNew h1 {
+                        margin: 0;
+                        line-height: normal;
+                        letter-spacing: normal;
+                    }
+                    .txtNew h2 {
+                        margin: 0;
+                        line-height: normal;
+                        letter-spacing: normal;
+                    }
+                    .txtNew h3 {
+                        margin: 0;
+                        line-height: normal;
+                        letter-spacing: normal;
+                    }
+                    .txtNew h4 {
+                        margin: 0;
+                        line-height: normal;
+                        letter-spacing: normal;
+                    }
+                    .txtNew h5 {
+                        margin: 0;
+                        line-height: normal;
+                        letter-spacing: normal;
+                    }
+                    .txtNew h6 {
+                        margin: 0;
+                        line-height: normal;
+                        letter-spacing: normal;
+                    }
+                    .txtNew a {
+                        color: inherit;
+                    }
+                </style>
+                <style type="text/css" data-styleid="pc1" data-reactid=".0.0.$pc1">
+                    .pc1screenWidthBackground {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                    }
+                    .pc1[data-state~="mobileView"] {
+                        position: absolute !important;
+                    }
+                    .pc1[data-state~="fixedPosition"] {
+                        position: fixed !important;
+                        left: auto !important;
+                        z-index: 50;
+                    }
+                    .pc1[data-state~="fixedPosition"].pc1_footer {
+                        top: auto;
+                        bottom: 0;
+                    }
+                    .pc1bg {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                    }
+                    .pc1inlineContent {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                    }
+                    .pc1centeredContent {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                    }
+                </style>
+                <style type="text/css" data-styleid="s_VOwPageGroupSkin" data-reactid=".0.0.$s_VOwPageGroupSkin">
+                    .s_VOwPageGroupSkin {
+                        height: 100px;
+                        width: 100px;
+                    }
+                    .s_VOwPageGroupSkinoverlay {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        background-color: rgba(0, 0, 0, 0.664);
+                    }
+                    .s_VOwPageGroupSkininlineContent {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                    }
+                </style>
+                <style type="text/css" data-styleid="style-j272xbrt" data-reactid=".0.0.$style-j272xbrt">
+                    .style-j272xbrtbg {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                    }
+                    .style-j272xbrt[data-state~="mobileView"] .style-j272xbrtbg {
+                        left: 10px;
+                        right: 10px;
+                    }
+                    .style-j272xbrtinlineContent {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                    }
+                </style>
+                <style type="text/css" data-styleid="style-j272xbrz1" data-reactid=".0.0.$style-j272xbrz1">
+                    .style-j272xbrz1[data-state~="shouldUseFlex"] .style-j272xbrz1link,
+                    .style-j272xbrz1[data-state~="shouldUseFlex"] .style-j272xbrz1labelwrapper {
+                        text-align: initial;
+                        display: -webkit-box;
+                        display: -webkit-flex;
+                        display: flex;
+                        -webkit-box-align: center;
+                        -webkit-align-items: center;
+                        align-items: center;
+                    }
+                    .style-j272xbrz1[data-state~="shouldUseFlex"][data-state~="center"] .style-j272xbrz1link,
+                    .style-j272xbrz1[data-state~="shouldUseFlex"][data-state~="center"] .style-j272xbrz1labelwrapper {
+                        -webkit-box-pack: center;
+                        -webkit-justify-content: center;
+                        justify-content: center;
+                    }
+                    .style-j272xbrz1[data-state~="shouldUseFlex"][data-state~="left"] .style-j272xbrz1link,
+                    .style-j272xbrz1[data-state~="shouldUseFlex"][data-state~="left"] .style-j272xbrz1labelwrapper {
+                        -webkit-box-pack: start;
+                        -webkit-justify-content: flex-start;
+                        justify-content: flex-start;
+                    }
+                    .style-j272xbrz1[data-state~="shouldUseFlex"][data-state~="right"] .style-j272xbrz1link,
+                    .style-j272xbrz1[data-state~="shouldUseFlex"][data-state~="right"] .style-j272xbrz1labelwrapper {
+                        -webkit-box-pack: end;
+                        -webkit-justify-content: flex-end;
+                        justify-content: flex-end;
+                    }
+                    .style-j272xbrz1link {
+                        border-radius: 0;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+                    }
+                    .style-j272xbrz1label {
+                        font: normal normal normal 20px/1.4em helvetica-w01-light, helvetica-w02-light, sans-serif;
+                        transition: color 0.4s ease 0s;
+                        color: #FFFFFF;
+                        display: inline-block;
+                        margin: calc(-1 * 2px) 2px 0;
+                        position: relative;
+                        white-space: nowrap;
+                    }
+                    .style-j272xbrz1[data-state~="shouldUseFlex"] .style-j272xbrz1label {
+                        margin: 0;
+                    }
+                    .style-j272xbrz1[data-disabled="false"] .style-j272xbrz1link {
+                        background-color: transparent;
+                        border: solid rgba(255, 255, 255, 1) 2px;
+                        cursor: pointer !important;
+                    }
+                    .style-j272xbrz1[data-disabled="false"]:active[data-state~="mobile"] .style-j272xbrz1link,
+                    .style-j272xbrz1[data-disabled="false"]:hover[data-state~="desktop"] .style-j272xbrz1link {
+                        background-color: rgba(194, 56, 69, 1);
+                        border-color: rgba(194, 56, 69, 1);
+                    }
+                    .style-j272xbrz1[data-disabled="false"]:active[data-state~="mobile"] .style-j272xbrz1label,
+                    .style-j272xbrz1[data-disabled="false"]:hover[data-state~="desktop"] .style-j272xbrz1label {
+                        color: #FFFFFF;
+                    }
+                    .style-j272xbrz1[data-disabled="true"] .style-j272xbrz1link {
+                        background-color: rgba(204, 204, 204, 1);
+                        border-color: rgba(204, 204, 204, 1);
+                    }
+                    .style-j272xbrz1[data-disabled="true"] .style-j272xbrz1label {
+                        color: #FFFFFF;
+                    }
+                </style>
+                <style type="text/css" data-styleid="strc1" data-reactid=".0.0.$strc1">
+                    .strc1inlineContent {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                    }
+                </style>
+                <style type="text/css" data-styleid="wixAds" data-reactid=".0.0.$wixAds">
+                    .wixAdsmobileAd {
+                        width: 100%;
+                        height: 30px;
+                        position: relative;
+                        display: block;
+                        text-align: center;
+                        background-color: #313131;
+                        z-index: 999;
+                    }
+                    .wixAdsdesktopWADBottom {
+                        position: fixed;
+                        z-index: 999;
+                        width: 100%;
+                        bottom: 0;
+                        max-height: 10vh;
+                    }
+                    .wixAdsdesktopWADBottomContent {
+                        width: 100%;
+                        height: 40px;
+                        text-align: center;
+                        background-color: #404040;
+                        border-radius: 6px 6px 0 0;
+                        pointer-events: all;
+                        cursor: pointer;
+                    }
+                    .wixAdsdesktopWADBottomContent:hover {
+                        background-color: #222;
+                    }
+                    .wixAds[data-state~="facebook"] .wixAdsdesktopWADBottomContent {
+                        width: 500px;
+                        margin: 0 auto;
+                    }
+                    .wixAdsdesktopWADTop {
+                        position: fixed;
+                        z-index: 999;
+                        height: 26px;
+                        top: 0;
+                        right: 50px;
+                        overflow: hidden;
+                        background-color: #404040;
+                        border-radius: 0 0 6px 6px;
+                        pointer-events: all;
+                        cursor: pointer;
+                        -webkit-transition: all .3s ease-in-out;
+                        transition: all .3s ease-in-out;
+                    }
+                    .wixAdsdesktopWADTop:hover {
+                        height: 97px;
+                        background-color: rgba(50, 50, 50, 0.8);
+                    }
+                    .wixAdsdesktopWADTop:hover .wixAdsdesktopWADTopLabel {
+                        background-color: #222;
+                    }
+                    .wixAdsdesktopWADTopLabel {
+                        padding: 6px;
+                        font-size: 13px;
+                        line-height: 1.3em;
+                        color: #FFF;
+                        width: 100%;
+                        font-size: 13px;
+                        color: #FFF;
+                        font-weight: bold;
+                        line-height: 18px;
+                        text-align: justify;
+                        padding: 5px 10px;
+                    }
+                    .wixAds[data-state~="desktop"] .wixAdsmobileAd {
+                        display: none;
+                    }
+                    .wixAds[data-state~="mobile"] .wixAdsdesktopWADTop {
+                        display: none;
+                    }
+                    .wixAds[data-state~="mobile"] .wixAdsdesktopWADBottom {
+                        display: none;
+                    }
+                    .wixAdsdesktopWADTopLabel .wixAds_smallMusa {
+                        display: inline-block;
+                        text-indent: -9999px;
+                        width: 16px;
+                        height: 16px;
+                        margin-right: 5px;
+                        background-image: url("//static.wixstatic.com/media/0da768_0c5ce9e2ffa442bea0b79b690223a939~mv2.png");
+                        background-repeat: no-repeat;
+                        background-position: 0% 0%;
+                    }
+                    .wixAdsdesktopWADTopLabel .wixAds_smallLogo {
+                        display: inline-block;
+                        text-indent: -9999px;
+                        width: 29px;
+                        height: 16px;
+                        background-image: url("//static.wixstatic.com/media/0da768_0c5ce9e2ffa442bea0b79b690223a939~mv2.png");
+                        background-repeat: no-repeat;
+                        background-position: -16px top;
+                    }
+                    .wixAdsdesktopWADTopContent {
+                        font-size: 13px;
+                        line-height: 1.3em;
+                        color: #ffffff;
+                        font-weight: bold;
+                        line-height: 18px;
+                        text-align: justify;
+                        padding: 5px 10px;
+                        width: 100%;
+                    }
+                    .wixAdsdesktopWADBottomContent .wixAds_faceBanner {
+                        background-color: rgba(64, 64, 64, 1);
+                        width: 500px;
+                        height: 100%;
+                        margin: 0 auto;
+                        border-radius: 6px 6px 0 0;
+                        padding: 5px 0 0 0;
+                    }
+                    .wixAdsdesktopWADBottomContent .wixAds_faceBanner div {
+                        display: inline-block;
+                        height: 30px;
+                    }
+                    .wixAdsdesktopWADBottomContent .wixAds_faceBanner .wixAds_txt {
+                        color: #fff;
+                        font-weight: bold;
+                        font-size: 15px;
+                        text-align: justify;
+                        margin: -2px 10px 0 19px;
+                    }
+                    .wixAdsdesktopWADBottomContent .wixAds_faceBanner .wixAds_logoDot {
+                        position: static;
+                        margin: 0 3px;
+                    }
+                    .wixAdsdesktopWADBottomContent .wixAds_faceBanner .wixAds_emphasis {
+                        font-weight: bold;
+                        position: relative;
+                        top: -6px;
+                    }
+                    .wixAdsdesktopWADTopContent .wixAds_spacer {
+                        line-height: 26px;
+                    }
+                    .wixAdsdesktopWADTopContent .wixAds_emphasis {
+                        color: #ffcc00;
+                    }
+                    .wixAdsdesktopWADTopContent .wixAds_cap {
+                        font-size: 16px;
+                        line-height: 1.3em;
+                        text-transform: uppercase;
+                    }
+                    .wixAdsdesktopWADTopContent .wixAds_face {
+                        display: block;
+                        line-height: 18px;
+                        text-align: justify;
+                        padding: 0 20px;
+                        width: 120px;
+                    }
+                    .wixAdsdesktopWADBottomContent .wixAds_adFootBox {
+                        height: 40px;
+                        width: 100%;
+                        text-align: center;
+                    }
+                    .wixAdsdesktopWADBottomContent .wixAds_siteBanner {
+                        background-color: rgba(64, 64, 64, 1);
+                        border-radius: 6px 6px 0 0;
+                        width: 100%;
+                        height: 100%;
+                        text-align: center;
+                    }
+                    .wixAdsdesktopWADBottomContent:hover .wixAds_siteBanner {
+                        background-color: #222;
+                    }
+                    .wixAdsdesktopWADBottomContent .wixAds_siteBanner .wixAds_wrapper {
+                        padding: 5px 0;
+                    }
+                    .wixAdsdesktopWADBottomContent .wixAds_siteBanner .wixAds_wrapper div {
+                        display: inline-block;
+                        height: 30px;
+                    }
+                    .wixAdsdesktopWADBottomContent .wixAds_bigMusa {
+                        text-indent: -9999px;
+                        width: 36px;
+                        background-image: url("//static.wixstatic.com/media/0da768_0c5ce9e2ffa442bea0b79b690223a939~mv2.png");
+                        background-repeat: no-repeat;
+                        background-position: left bottom;
+                        position: relative;
+                        top: -19px;
+                    }
+                    .wixAdsdesktopWADBottomContent.wixAds_nativeAndroid .wixAds_bigMusa {
+                        overflow: hidden;
+                    }
+                    .wixAdsdesktopWADBottomContent .wixAds_logoDot {
+                        text-indent: -9999px;
+                        width: 39px;
+                        height: 15px;
+                        position: relative;
+                        top: -4px;
+                        margin: 0 5px;
+                        background-image: url("//static.wixstatic.com/media/0da768_0c5ce9e2ffa442bea0b79b690223a939~mv2.png");
+                        background-repeat: no-repeat;
+                        background-position: right -17px;
+                    }
+                    .wixAdsdesktopWADBottomContent .wixAds_emphasis {
+                        color: #ffcc00;
+                        font-size: 16px;
+                        text-transform: uppercase;
+                    }
+                    .wixAdsdesktopWADBottomContent .wixAds_txt {
+                        color: #fff;
+                        font-weight: bold;
+                        font-size: 15px;
+                    }
+                    .wixAdsdesktopWADBottomContent .wixAds_siteBanner .wixAds_txt {
+                        line-height: 47px;
+                    }
+                    @media (orientation: landscape) {
+                        .wixAdsmobileAd {
+                            display: none;
+                        }
+                    }
+                    @media (orientation: landscape) {
+                        .wixAds_wixAds[data-state~="mobile"] {
+                            display: none;
+                        }
+                    }
+                </style>
+                <style type="text/css" data-styleid="deadComp" data-reactid=".0.0.$deadComp">
+                    .deadComp {
+                        background: transparent;
+                    }
+                </style>
+                <style type="text/css" data-styleid="siteBackground" data-reactid=".0.0.$siteBackground">
+                    .siteBackground {
+                        width: 100%;
+                        position: absolute;
+                    }
+                    .siteBackgroundbgBeforeTransition {
+                        position: absolute;
+                        top: 0;
+                    }
+                    .siteBackgroundbgAfterTransition {
+                        position: absolute;
+                        top: 0;
+                    }
+                </style>
+                <style type="text/css" data-styleid="loginDialog" data-reactid=".0.0.$loginDialog">
+                    .loginDialog {
+                        position: fixed;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 99;
+                        font-family: Arial, sans-serif;
+                        font-size: 1em;
+                        color: #9C9C9C;
+                    }
+                    .loginDialogblockingLayer {
+                        background-color: rgba(85, 85, 85, 0.75);
+                        position: fixed;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        visibility: visible;
+                        zoom: 1;
+                        overflow: auto;
+                    }
+                    .loginDialogdialog {
+                        background-color: rgba(170, 170, 170, 0.7);
+                        width: 455px;
+                        position: fixed;
+                        padding: 20px;
+                    }
+                    .loginDialog_wrapper {
+                        background-color: rgba(255, 255, 255, 1);
+                        padding: 45px 40px 0 40px;
+                    }
+                    .loginDialogxButton {
+                        position: absolute;
+                        top: -14px;
+                        right: -14px;
+                        cursor: pointer;
+                        background: transparent url(https://static.parastorage.com/services/skins/2.1229.72/images/wysiwyg/core/themes/base/viewer_login_sprite.png) no-repeat right top;
+                        height: 30px;
+                        width: 30px;
+                    }
+                    .loginDialogxButton:hover {
+                        background-position: right -80px;
+                    }
+                    .loginDialogheader {
+                        padding-bottom: 25px;
+                        line-height: 30px;
+                    }
+                    .loginDialogfavIcon {
+                        float: left;
+                        margin: 7px 7px 0 0;
+                        width: 16px;
+                        height: 16px;
+                    }
+                    .loginDialogtitle {
+                        font-size: 20px;
+                        font-weight: bold;
+                        color: #555555;
+                    }
+                    .loginDialog[data-state~="mobile"] {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 99;
+                        font-family: Arial, sans-serif;
+                        font-size: 1em;
+                        color: #9C9C9C;
+                        top: 0;
+                    }
+                    .loginDialog[data-state~="mobile"] .loginDialogheader {
+                        padding-bottom: 10px;
+                        line-height: 30px;
+                    }
+                    .loginDialog[data-state~="mobile"] .loginDialogfavIcon {
+                        display: none;
+                    }
+                    .loginDialog[data-state~="mobile"] .loginDialogtitle {
+                        font-size: 14px;
+                    }
+                    .loginDialog[data-state~="mobile"] .loginDialogdialog {
+                        width: 260px;
+                        padding: 10px;
+                        position: absolute;
+                    }
+                    .loginDialog[data-state~="mobile"] .loginDialog_footer {
+                        margin-top: 0;
+                        padding-bottom: 10px;
+                    }
+                    .loginDialog[data-state~="mobile"] .loginDialogcancel {
+                        font-size: 14px;
+                        line-height: 30px;
+                    }
+                    .loginDialog[data-state~="mobile"] .loginDialog_wrapper {
+                        padding: 14px 12px 0 12px;
+                    }
+                    .loginDialog[data-state~="mobile"] .loginDialogsubmitButton {
+                        height: 30px;
+                        width: 100px;
+                        font-size: 14px;
+                    }
+                    .loginDialog_forgot {
+                        text-align: left;
+                        font-size: 12px;
+                    }
+                    .loginDialog_forgot a {
+                        color: #0198ff;
+                        border-bottom: 1px solid #0198ff;
+                    }
+                    .loginDialog_forgot a:hover {
+                        color: #0044ff;
+                        border-bottom: 1px solid #0044ff;
+                    }
+                    .loginDialog_error {
+                        font-size: 12px;
+                        color: #d74401;
+                        text-align: right;
+                    }
+                    .loginDialog_footer {
+                        width: 100%;
+                        margin-top: 27px;
+                        padding-bottom: 40px;
+                    }
+                    .loginDialogcancel {
+                        color: #9C9C9C;
+                        font-size: 18px;
+                        text-decoration: underline;
+                        line-height: 36px;
+                    }
+                    .loginDialogcancel:hover {
+                        color: #9c3c3c;
+                    }
+                    .loginDialogpasswordInput label {
+                        font-size: 14px;
+                    }
+                    .loginDialogpasswordInput label[data-type="password"] {
+                        font-size: 14px;
+                        line-height: 30px;
+                        height: 30px;
+                    }
+                    .loginDialogsubmitButton {
+                        float: right;
+                        cursor: pointer;
+                        border: solid 2px #0064a8;
+                        height: 36px;
+                        width: 143px;
+                        background: transparent url(https://static.parastorage.com/services/skins/2.1229.72/images/wysiwyg/core/themes/base/viewer_login_sprite.png) repeat-x right -252px;
+                        color: #ffffff;
+                        font-size: 24px;
+                        font-weight: bold;
+                        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+                    }
+                    .loginDialogsubmitButton:hover {
+                        background-position: right -352px;
+                        border-color: #004286;
+                    }
+                    .loginDialog[data-state="normal"] .loginDialogerror {
+                        display: none;
+                    }
+                    .loginDialog[data-state="error"] .loginDialogerror {
+                        display: block;
+                        font-size: 12px;
+                        color: #d74401;
+                        text-align: right;
+                    }
+                    .loginDialog[data-state="error"] .loginDialogpasswordInput {
+                        border-color: #d74401;
+                    }
+                    .loginDialogpasswordInput {
+                        font-size: 1em;
+                    }
+                    .loginDialogpasswordInput label {
+                        float: none;
+                        font-size: 17px;
+                        line-height: 25px;
+                        color: #585858;
+                    }
+                    .loginDialogpasswordInput[data-state~="mobile"] label {
+                        float: none;
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: #585858;
+                    }
+                    .loginDialogpasswordInputinput {
+                        padding: 0 15px;
+                        width: 100%;
+                        height: 42px;
+                        font-size: 19px;
+                        line-height: 42px;
+                        color: #0198ff;
+                        margin: 0 -3px;
+                        background: transparent url(https://static.parastorage.com/services/skins/2.1229.72/images/wysiwyg/core/themes/base/viewer_login_sprite.png) repeat-x right -170px;
+                        border: solid 1px #a1a1a1;
+                        box-sizing: border-box;
+                    }
+                    .loginDialogpasswordInput[data-state~="mobile"] .loginDialogpasswordInputinput {
+                        padding: 0 15px;
+                        width: 100%;
+                        height: 30px;
+                        font-size: 14px;
+                        line-height: 30px;
+                        color: #0198ff;
+                        margin: 0 -3px;
+                        background: transparent url(https://static.parastorage.com/services/skins/2.1229.72/images/wysiwyg/core/themes/base/viewer_login_sprite.png) repeat-x right -170px;
+                        border: solid 1px #a1a1a1;
+                        box-sizing: border-box;
+                    }
+                    .loginDialogpasswordInputinput[data-type="password"] {
+                        font-size: 38px;
+                    }
+                    .loginDialogpasswordInput[data-state~="mobile"] .loginDialogpasswordInputinput[data-type="password"] {
+                        font-size: 14px;
+                    }
+                    .loginDialogpasswordInputerrorMessage {
+                        display: block;
+                        font-size: 12px;
+                        color: #d74401;
+                        text-align: right;
+                        height: 15px;
+                    }
+                    .loginDialogpasswordInput:not([data-state~="invalid"]) .loginDialogpasswordInputerrorMessage {
+                        visibility: hidden;
+                    }
+                    .loginDialogpasswordInput[data-state~="invalid"] .loginDialogpasswordInputerrorMessage {
+                        visibility: visible;
+                    }
+                    .loginDialogpasswordInput[data-state~="invalid"] input {
+                        border-color: #d74401;
+                    }
+                    .loginDialogpasswordInput[data-state~="invalid"] .loginDialogpasswordInputinput {
+                        border-color: red;
+                    }
+                </style>
+                <style type="text/css" data-reactid=".0.0.$testStyle">
+                    .testStyles {
+                        position: absolute;
+                        display: none;
+                        z-index: 1
+                    }
+                </style>
+                <div class="testStyles" data-reactid=".0.0.$testStyles_div"></div>
+                <style type="text/css" data-styleid="uploadedFonts" data-reactid=".0.0.l"></style>
+                <div style="overflow:hidden;visibility:hidden;max-height:0;max-width:0;position:absolute;" data-reactid=".0.0.$fontsLoader">
+                    <style data-reactid=".0.0.$fontsLoader.0">
+                        .font-ruler-content::after {
+                            content: "@#$%%^&*~IAO"
+                        }
+                    </style>
+                </div>
+            </div>
+            <div id="SITE_BACKGROUND" class="siteBackground" style="position: absolute; top: 0px; height: 1123px; width: 1519px;" data-reactid=".0.$SITE_BACKGROUND">
+                <div id="SITE_BACKGROUND_previous_noPrev" class="siteBackgroundprevious" data-reactid=".0.$SITE_BACKGROUND.$noPrevscrollpreview" style="width: 100%; height: 100%;">
+                    <div id="SITE_BACKGROUNDpreviousImage" class="siteBackgroundpreviousImage" data-reactid=".0.$SITE_BACKGROUND.$noPrevscrollpreview.$previousImage"></div>
+                    <div id="SITE_BACKGROUNDpreviousVideo" class="siteBackgroundpreviousVideo" data-reactid=".0.$SITE_BACKGROUND.$noPrevscrollpreview.$previousVideo"></div>
+                    <div id="SITE_BACKGROUND_previousOverlay_noPrev" class="siteBackgroundpreviousOverlay" data-reactid=".0.$SITE_BACKGROUND.$noPrevscrollpreview.$previousOverlay"></div>
+                </div>
+                <div id="SITE_BACKGROUND_current_i4e81_desktop_bg" style="top: 0px; background-color: rgb(58, 86, 88); position: absolute; width: 100%; height: 100%;" data-position="absolute" class="siteBackgroundcurrent" data-reactid=".0.$SITE_BACKGROUND.$i4e81_desktop_bgscrollpreview">
+                    <div id="SITE_BACKGROUND_currentImage_i4e81_desktop_bg" style="position: absolute; top: 0px; width: 100%; opacity: 0.49; background-size: cover; background-position: center center; background-repeat: no-repeat; height: 100%; background-image: url(&quot;https://static.wixstatic.com/media/471538c9508f4d80bf12003e922cdee3.jpg/v1/fill/w_1920,h_1280,al_c,q_85,usm_0.66_1.00_0.01/471538c9508f4d80bf12003e922cdee3.webp&quot;);" data-type="bgimage" data-height="100%" class="siteBackgroundcurrentImage" data-reactid=".0.$SITE_BACKGROUND.$i4e81_desktop_bgscrollpreview.$currentImage" data-image-css="{&quot;backgroundSize&quot;:&quot;cover&quot;,&quot;backgroundPosition&quot;:&quot;center center&quot;,&quot;backgroundRepeat&quot;:&quot;no-repeat&quot;,&quot;height&quot;:&quot;100%&quot;}"></div>
+                    <div id="SITE_BACKGROUNDcurrentVideo" class="siteBackgroundcurrentVideo" data-reactid=".0.$SITE_BACKGROUND.$i4e81_desktop_bgscrollpreview.$currentVideo"></div>
+                    <div id="SITE_BACKGROUND_currentOverlay_i4e81_desktop_bg" style="position:absolute;top:0;width:100%;height:100%;" class="siteBackgroundcurrentOverlay" data-reactid=".0.$SITE_BACKGROUND.$i4e81_desktop_bgscrollpreview.$currentOverlay"></div>
+                </div>
+            </div>
+            <div class="SITE_ROOT" id="SITE_ROOT" style="width:980px;padding-bottom:0;" data-reactid=".0.$SITE_ROOT">
+                <div style="width: 980px; position: static; top: 0px; height: 1123px;" id="masterPage" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot">
+                    <header style="width: 980px; position: fixed; z-index: 50; top: 0px; height: 96px; left: 0px;" class="style-if584y9h" data-state=" fixedPosition" id="SITE_HEADER" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER">
+                        <div id="SITE_HEADERscreenWidthBackground" class="style-if584y9hscreenWidthBackground" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$screenWidthBackground" style="width: 1519px; left: -270px;">
+                            <div class="style-if584y9h_bg" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$screenWidthBackground.0"></div>
+                        </div>
+                        <div id="SITE_HEADERcenteredContent" class="style-if584y9hcenteredContent" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent">
+                            <div id="SITE_HEADERbg" class="style-if584y9hbg" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$bg"></div>
+                            <div id="SITE_HEADERinlineContent" class="style-if584y9hinlineContent" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent">
+                                <div style="position: absolute; width: 955px; height: 69px; top: 9px; left: 11px;" class="s_BIwzIGroupSkin" id="comp-iyzdcbwx" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx">
+                                    <div id="comp-iyzdcbwxinlineContent" class="s_BIwzIGroupSkininlineContent" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx.$inlineContent">
+                                        <nav id="DrpDwnMn0-pl0" data-menuborder-y="0" data-menubtn-border="0" data-ribbon-els="0" data-label-pad="0" data-ribbon-extra="0" data-drophposition="" data-dropalign="left" dir="ltr" style="width: 611px; position: absolute; left: 320px; top: 19px; height: 21px;" class="style-ivvwqr5j" data-state="left notMobile" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx.$inlineContent.$DrpDwnMn0-pl0" data-dropmode="dropDown">
+                                            <ul style="text-align:left;" aria-label="Site navigation" role="navigation" id="DrpDwnMn0-pl0itemsContainer" class="style-ivvwqr5jitemsContainer" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx.$inlineContent.$DrpDwnMn0-pl0.$itemsContainer">
+                                                <li>
+                                                    <div class="dropdown" style="float:left;">
+                                                        <button class="dropbtn">
+                                                            <a href="http://anzeh.com/franchise-dev/franchise-solutions.html" style="color: black;">SOLUTIONS</a>
+                                                        </button>
+                                                        <div class="dropdown-content" style="left:0;">
+                                                            <a href="http://anzeh.com/franchise-dev/franchise-expansion-support.html">F&B Expansion Support</a>
+                                                            <a href="http://anzeh.com/franchise-dev/franchise-cafe-setup.html">Restaurant Cafe Setup</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="dropdown" style="float:left;">
+                                                        <button class="dropbtn">
+                                                            <a href="http://anzeh.com/franchise-dev/franchise-solutions.html#comp-iwxapx9v" style="color: black;">RESULTS</a>
+                                                        </button>
+                                                        <div class="dropdown-content" style="left:0;">
+                                                            <a href="http://anzeh.com/franchise-dev/franchise-our-clients.html">Our Clients</a>
+                                                            <a href="http://anzeh.com/franchise-dev/franchise-client-stories.html">Client Stories</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="dropdown" style="float:left;">
+                                                        <button class="dropbtn">
+                                                            <a href="http://anzeh.com/franchise-dev/franchise-gallery.html" style="color: black;">GALLERY</a>
+                                                        </button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="dropdown" style="float:left;">
+                                                        <button class="dropbtn">
+                                                            <a href="http://anzeh.com/franchise-dev/franchise-fb-insider.html" style="color: black;">F&amp;B INSIDER</a>
+                                                        </button>
+                                                        <div class="dropdown-content" style="left:0;">
+                                                            <a href="http://anzeh.com/franchise-dev/franchise-our-help.html">Do you need our help?</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div id="DrpDwnMn0-pl0moreButton" class="style-ivvwqr5jmoreButton" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx.$inlineContent.$DrpDwnMn0-pl0.$moreButton"></div>
+                                            <nav style="visibility:hidden;" data-drophposition="" data-dropalign="left" id="DrpDwnMn0-pl0dropWrapper" class="style-ivvwqr5jdropWrapper" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx.$inlineContent.$DrpDwnMn0-pl0.$dropWrapper">
+                                                <ul style="visibility:hidden;" id="DrpDwnMn0-pl0moreContainer" class="style-ivvwqr5jmoreContainer" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx.$inlineContent.$DrpDwnMn0-pl0.$dropWrapper.$moreContainer"></ul>
+                                            </nav>
+                                        </nav>
+                                        <div style="position: absolute; width: 320px; height: 68px; top: 0px; left: 0px;" data-exact-height="68" data-content-padding-horizontal="0" data-content-padding-vertical="0" title="F&B at Work Pte Ltd.png" class="style-if5d6fkk3" id="comp-iw5t8agc" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx.$inlineContent.$comp-iw5t8agc">
+                                            <a style="cursor: pointer; width: 320px; height: 68px;" href="http://anzeh.com/franchise-dev/franchise-solutions.html" target="_self" id="comp-iw5t8agclink" class="style-if5d6fkk3link" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx.$inlineContent.$comp-iw5t8agc.$link">
+                                                <div id="comp-iw5t8agcimg" data-style="" class="style-if5d6fkk3img" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx.$inlineContent.$comp-iw5t8agc.$link.0" style="position: relative; width: 320px; height: 68px;">
+                                                    <div class="style-if5d6fkk3imgpreloader" id="comp-iw5t8agcimgpreloader" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx.$inlineContent.$comp-iw5t8agc.$link.0.$preloader"></div>
+													<img id="comp-iw5t8agcimgimage" alt="F&B at Work Pte Ltd" data-type="image" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx.$inlineContent.$comp-iw5t8agc.$link.0.$image" 
+														src="http://anzeh.com/images/logo/f&b-at-work-logo.png" style="width: 320px; height: 70px;">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div style="width: 72px; position: absolute; height: 18px; top: 19px; left: 883px;" class="lb1" id="comp-iy8uc2fq" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx.$inlineContent.$comp-iy8uc2fq">
+                                            <ul aria-label="Social bar" id="comp-iy8uc2fqitemsContainer" class="lb1itemsContainer" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx.$inlineContent.$comp-iy8uc2fq.$itemsContainer">
+                                                <li style="width:18px;height:18px;margin-bottom:0;margin-right:9px;display:inline-block;" class="lb1imageItem" id="comp-iy8uc2fq0image" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx.$inlineContent.$comp-iy8uc2fq.$itemsContainer.0">
+                                                    <a href="https://www.facebook.com/FB-Coffee-Shop-Franchise-Setup-Myanmar-348942975531527/" target="_blank" data-content="https://www.facebook.com" data-type="external" id="comp-iy8uc2fq0imagelink" class="lb1imageItemlink" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx.$inlineContent.$comp-iy8uc2fq.$itemsContainer.0.$link">
+                                                        <div id="comp-iy8uc2fq0imageimage" style="position: absolute; width: 18px; height: 18px;" data-style="position:absolute" class="lb1imageItemimage" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx.$inlineContent.$comp-iy8uc2fq.$itemsContainer.0.$link.0">
+                                                            <div class="lb1imageItemimagepreloader" id="comp-iy8uc2fq0imageimagepreloader" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx.$inlineContent.$comp-iy8uc2fq.$itemsContainer.0.$link.0.$preloader"></div><img id="comp-iy8uc2fq0imageimageimage" alt="Black Facebook Icon" data-type="image" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx.$inlineContent.$comp-iy8uc2fq.$itemsContainer.0.$link.0.$image" src="http://anzeh.com/franchise-dev/images/icon/facebook-mini-icon.png" style="width: 18px; height: 18px; object-fit: cover;">
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li style="width:18px;height:18px;margin-bottom:0;margin-right:9px;display:inline-block;" class="lb1imageItem" id="comp-iy8uc2fq1image" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx.$inlineContent.$comp-iy8uc2fq.$itemsContainer.1">
+                                                    <a href="https://www.instagram.com" target="_blank" data-content="https://www.instagram.com" data-type="external" id="comp-iy8uc2fq1imagelink" class="lb1imageItemlink" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx.$inlineContent.$comp-iy8uc2fq.$itemsContainer.1.$link">
+                                                        <div id="comp-iy8uc2fq1imageimage" style="position: absolute; width: 18px; height: 18px;" data-style="position:absolute" class="lb1imageItemimage" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx.$inlineContent.$comp-iy8uc2fq.$itemsContainer.1.$link.0">
+                                                            <div class="lb1imageItemimagepreloader" id="comp-iy8uc2fq1imageimagepreloader" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx.$inlineContent.$comp-iy8uc2fq.$itemsContainer.1.$link.0.$preloader"></div><img id="comp-iy8uc2fq1imageimageimage" alt="Black Instagram Icon" data-type="image" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx.$inlineContent.$comp-iy8uc2fq.$itemsContainer.1.$link.0.$image" src="http://anzeh.com/franchise-dev/images/icon/instagram-mini-icon.png" style="width: 18px; height: 18px; object-fit: cover;">
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li style="width:18px;height:18px;margin-bottom:0;margin-right:9px;display:inline-block;" class="lb1imageItem" id="comp-iy8uc2fq2image" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx.$inlineContent.$comp-iy8uc2fq.$itemsContainer.2">
+                                                    <a href="https://www.linkedin.com" target="_blank" data-content="https://www.linkedin.com" data-type="external" id="comp-iy8uc2fq2imagelink" class="lb1imageItemlink" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx.$inlineContent.$comp-iy8uc2fq.$itemsContainer.2.$link">
+                                                        <div id="comp-iy8uc2fq2imageimage" style="position: absolute; width: 18px; height: 18px;" data-style="position:absolute" class="lb1imageItemimage" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx.$inlineContent.$comp-iy8uc2fq.$itemsContainer.2.$link.0">
+                                                            <div class="lb1imageItemimagepreloader" id="comp-iy8uc2fq2imageimagepreloader" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx.$inlineContent.$comp-iy8uc2fq.$itemsContainer.2.$link.0.$preloader"></div><img id="comp-iy8uc2fq2imageimageimage" alt="Black LinkedIn Icon" data-type="image" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.$centeredContent.$inlineContent.$comp-iyzdcbwx.$inlineContent.$comp-iy8uc2fq.$itemsContainer.2.$link.0.$image" src="http://anzeh.com/franchise-dev/images/icon/linkedin-mini-icon.png" style="width: 18px; height: 18px; object-fit: cover;">
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <footer style="width: 980px; position: absolute; left: 0px; height: 95px; bottom: auto; top: 1028px;" class="style-iwyif1qn_footer style-iwyif1qn" data-state=" " id="SITE_FOOTER" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_FOOTER">
+                        <div id="SITE_FOOTERscreenWidthBackground" class="style-iwyif1qnscreenWidthBackground" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_FOOTER.$screenWidthBackground" style="width: 1519px; left: -270px;">
+                            <div class="style-iwyif1qn_bg" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_FOOTER.$screenWidthBackground.0"></div>
+                        </div>
+                        <div id="SITE_FOOTERcenteredContent" class="style-iwyif1qncenteredContent" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_FOOTER.$centeredContent">
+                            <div id="SITE_FOOTERbg" class="style-iwyif1qnbg" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_FOOTER.$centeredContent.$bg"></div>
+                            <div id="SITE_FOOTERinlineContent" class="style-iwyif1qninlineContent" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_FOOTER.$centeredContent.$inlineContent">
+                                <div style="left: 20px; width: 203px; position: absolute; top: 27px;" class="txtNew" id="WRchTxt0-16wb" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_FOOTER.$centeredContent.$inlineContent.$WRchTxt0-16wb">
+                                    <p class="font_9" style="font-size:12px;"><span class="color_15"><span style="font-size:12px;"></span></span>
+                                    </p>
+                                </div>
+                                <div style="left: 550px; width: 320px; position: absolute; top: 27px;" class="txtNew" id="WRchTxts-jbi" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_FOOTER.$centeredContent.$inlineContent.$WRchTxts-jbi">
+                                    <p class="font_9" style="font-size:12px; text-align:center;">
+                                        <span class="color_15">
+											<span style="font-size:12px;">
+												<object height="0">
+													<a class="auto-generated-link" data-auto-recognition="true" data-content="mark@anzeh.com" 
+														href="mailto:mark@anzeh.com" data-type="mail">
+														mark@anzeh.com</a>
+												</object>
+												| +959422930353 | +84 938666076 |
+											</span>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div style="width: 72px; left: 888px; position: absolute; top: 26px; height: 18px;" class="lb1" id="LnkBr0-199w" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_FOOTER.$centeredContent.$inlineContent.$LnkBr0-199w">
+                                    <ul aria-label="Social bar" id="LnkBr0-199witemsContainer" class="lb1itemsContainer" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_FOOTER.$centeredContent.$inlineContent.$LnkBr0-199w.$itemsContainer">
+                                        <li style="width:18px;height:18px;margin-bottom:0;margin-right:9px;display:inline-block;" class="lb1imageItem" id="LnkBr0-199w0image" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_FOOTER.$centeredContent.$inlineContent.$LnkBr0-199w.$itemsContainer.0">
+                                            <a href="https://www.facebook.com/FB-Coffee-Shop-Franchise-Setup-Myanmar-348942975531527/" target="_blank" data-content="https://www.facebook.com" data-type="external" id="LnkBr0-199w0imagelink" class="lb1imageItemlink" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_FOOTER.$centeredContent.$inlineContent.$LnkBr0-199w.$itemsContainer.0.$link">
+                                                <div id="LnkBr0-199w0imageimage" style="position: absolute; width: 18px; height: 18px;" data-style="position:absolute" class="lb1imageItemimage" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_FOOTER.$centeredContent.$inlineContent.$LnkBr0-199w.$itemsContainer.0.$link.0">
+                                                    <div class="lb1imageItemimagepreloader" id="LnkBr0-199w0imageimagepreloader" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_FOOTER.$centeredContent.$inlineContent.$LnkBr0-199w.$itemsContainer.0.$link.0.$preloader"></div><img id="LnkBr0-199w0imageimageimage" alt="Black Facebook Icon" data-type="image" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_FOOTER.$centeredContent.$inlineContent.$LnkBr0-199w.$itemsContainer.0.$link.0.$image" style="width: 18px; height: 18px; object-fit: cover;" src="http://anzeh.com/franchise-dev/images/icon/facebook-mini-icon.png">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li style="width:18px;height:18px;margin-bottom:0;margin-right:9px;display:inline-block;" class="lb1imageItem" id="LnkBr0-199w1image" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_FOOTER.$centeredContent.$inlineContent.$LnkBr0-199w.$itemsContainer.1">
+                                            <a href="https://www.instagram.com" target="_blank" data-content="https://www.instagram.com" data-type="external" id="LnkBr0-199w1imagelink" class="lb1imageItemlink" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_FOOTER.$centeredContent.$inlineContent.$LnkBr0-199w.$itemsContainer.1.$link">
+                                                <div id="LnkBr0-199w1imageimage" style="position: absolute; width: 18px; height: 18px;" data-style="position:absolute" class="lb1imageItemimage" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_FOOTER.$centeredContent.$inlineContent.$LnkBr0-199w.$itemsContainer.1.$link.0">
+                                                    <div class="lb1imageItemimagepreloader" id="LnkBr0-199w1imageimagepreloader" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_FOOTER.$centeredContent.$inlineContent.$LnkBr0-199w.$itemsContainer.1.$link.0.$preloader"></div><img id="LnkBr0-199w1imageimageimage" alt="Black Instagram Icon" data-type="image" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_FOOTER.$centeredContent.$inlineContent.$LnkBr0-199w.$itemsContainer.1.$link.0.$image" style="width: 18px; height: 18px; object-fit: cover;" src="http://anzeh.com/franchise-dev/images/icon/instagram-mini-icon.png">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li style="width:18px;height:18px;margin-bottom:0;margin-right:9px;display:inline-block;" class="lb1imageItem" id="LnkBr0-199w2image" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_FOOTER.$centeredContent.$inlineContent.$LnkBr0-199w.$itemsContainer.2">
+                                            <a href="https://www.linkedin.com" target="_blank" data-content="https://www.linkedin.com" data-type="external" id="LnkBr0-199w2imagelink" class="lb1imageItemlink" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_FOOTER.$centeredContent.$inlineContent.$LnkBr0-199w.$itemsContainer.2.$link">
+                                                <div id="LnkBr0-199w2imageimage" style="position: absolute; width: 18px; height: 18px;" data-style="position:absolute" class="lb1imageItemimage" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_FOOTER.$centeredContent.$inlineContent.$LnkBr0-199w.$itemsContainer.2.$link.0">
+                                                    <div class="lb1imageItemimagepreloader" id="LnkBr0-199w2imageimagepreloader" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_FOOTER.$centeredContent.$inlineContent.$LnkBr0-199w.$itemsContainer.2.$link.0.$preloader"></div><img id="LnkBr0-199w2imageimageimage" alt="Black LinkedIn Icon" data-type="image" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$SITE_FOOTER.$centeredContent.$inlineContent.$LnkBr0-199w.$itemsContainer.2.$link.0.$image" style="width: 18px; height: 18px; object-fit: cover;" src="http://anzeh.com/franchise-dev/images/icon/linkedin-mini-icon.png">
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                    <div style="width: 980px; position: absolute; top: 96px; height: 930px; left: 0px;" class="pc1" data-state="" id="PAGES_CONTAINER" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER">
+                        <div id="PAGES_CONTAINERscreenWidthBackground" class="pc1screenWidthBackground" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$screenWidthBackground" style="width: 1519px; left: -270px;"></div>
+                        <div id="PAGES_CONTAINERcenteredContent" class="pc1centeredContent" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent">
+                            <div id="PAGES_CONTAINERbg" class="pc1bg" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$bg"></div>
+                            <div id="PAGES_CONTAINERinlineContent" class="pc1inlineContent" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent">
+                                <div style="left: 0px; width: 980px; position: absolute; top: 0px; height: 930px;" class="s_VOwPageGroupSkin" id="SITE_PAGES" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES">
+                                    <div style="left: 0px; width: 980px; position: absolute; top: 0px; height: 930px;" class="style-j272xbrt" id="i4e81" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP">
+                                        <div id="i4e81bg" class="style-j272xbrtbg" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$bg"></div>
+                                        <div id="i4e81inlineContent" class="style-j272xbrtinlineContent" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent">
+                                            <div id="comp-j272xbrw" data-align="center" data-disabled="false" data-margin="0" data-should-use-flex="true" style="left: 419px; position: absolute; top: 885px; height: 40px; min-height: 28px; width: 142px;" class="style-j272xbrz1" data-state="desktop shouldUseFlex center" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbrw" data-prev-text="Back" data-prev-min-width="46" data-prev-width="142">
+												<a href="http://anzeh.com/franchise-dev/franchise-expansion-support.html" target="_self" data-keep-roots="true" data-anchor="#dataItem-j14ulcxw" role="button" id="comp-j272xbrwlink" class="g-transparent-a style-j272xbrz1link" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbrw.$link"><span id="comp-j272xbrwlabel" class="style-j272xbrz1label" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbrw.$link.$label" style="">Back</span></a>
+                                            </div>
+                                            <div style="left: 24px; width: 814px; position: absolute; top: 12px;" class="txtNew" id="comp-j272xbs1" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbs1">
+                                                <h2 class="font_2" style="font-size:44px; line-height:1.2em;"><span style="color:rgb(255, 255, 254); font-family:helvetica-w01-bold,helvetica-w02-bold,helvetica-lt-w10-bold,sans-serif; letter-spacing:0.05em;">Central Kitchen &amp; Supply Chain</span></h2>
+                                            </div>
+                                            <div style="left: 24px; width: 932px; position: absolute; top: 66px;" class="txtNew" id="comp-j272xbse" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbse">
+                                                <p class="font_8" style="font-size:22px; line-height:1.8em;"><span class="color_11"><span style="font-weight:bold;"><span style="font-size:22px;"><span style="font-family:avenir-lt-w01_35-light1475496,sans-serif;"><span style="font-style:italic;">What are the Advantages?</span></span>
+                                                    </span>
+                                                    </span>
+                                                    </span>
+                                                </p>
+
+                                                <p class="font_8"><span style="font-family:avenir-lt-w01_35-light1475496,sans-serif;"><span class="color_11">When&nbsp;food and beverage businesses attain a certain level of scale and profits, supply chain and central kitchen setups become attractive strategies to extend their success. These assets allow for cost reduction at physical outlets and open up the possibility of becoming food processing Original Equipment Manufacturers (OEMs), a supply chain strategy which has the potential to dramatically increase profits and revenue.</span></span>
+                                                </p>
+
+                                                <p class="font_8" style="font-size:14px;">&nbsp;</p>
+
+                                                <p class="font_8" style="font-size:22px; line-height:1.8em;"><span style="font-size:22px;"><span style="font-family:avenir-lt-w01_35-light1475496,sans-serif;"><span style="font-style:italic;"><span class="color_11">Our Scope of Work</span></span>
+                                                    </span>
+                                                    </span>
+                                                </p>
+                                            </div>
+                                            <section style="width: 980px; position: absolute; top: 242px; height: 204px; left: 0px;" class="strc1" id="comp-j272xbsh" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh">
+                                                <div style="position: absolute; top: 0px; width: calc(980px); height: 100%; pointer-events: auto; bottom: 0px; left: calc(0px); right: calc(980px); overflow: hidden; clip: rect(0px 980px 204px 0px);" data-enable-video="true" class="strc1balata" id="comp-j272xbshbalata" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh.$playbackdesktop">
+                                                    <div style="position:absolute;width:100%;height:100%;" class="bgColor" id="comp-j272xbshbalatabgcolor" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh.$playbackdesktop.0">
+                                                        <div style="width:100%;height:100%;position:absolute;background-color:transparent;" id="comp-j272xbshbalatabgcoloroverlay" class="bgColoroverlay" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh.$playbackdesktop.0.$overlay"></div>
+                                                    </div>
+                                                </div>
+                                                <div id="comp-j272xbshinlineContent" class="strc1inlineContent" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh.$inlineContent">
+                                                    <div style="position: absolute; left: calc(0px); width: 196px; top: 0px; height: 204px;" class="strc1" id="comp-j272xbsw" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh.$inlineContent.$comp-j272xbsw/=1$comp-j272xbsw">
+                                                        <div style="position: absolute; top: 0px; width: calc(196px); height: 100%; pointer-events: auto; left: calc(0px); bottom: 0px; overflow: hidden; clip: rect(0px 196px 204px 0px);" data-enable-video="true" class="strc1balata" id="comp-j272xbswbalata" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh.$inlineContent.$comp-j272xbsw/=1$comp-j272xbsw.$playbackdesktop">
+                                                            <div style="position:absolute;width:100%;height:100%;" class="bgColor" id="comp-j272xbswbalatabgcolor" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh.$inlineContent.$comp-j272xbsw/=1$comp-j272xbsw.$playbackdesktop.0">
+                                                                <div style="width:100%;height:100%;position:absolute;background-color:rgba(255, 255, 255, 0.9);" id="comp-j272xbswbalatabgcoloroverlay" class="bgColoroverlay" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh.$inlineContent.$comp-j272xbsw/=1$comp-j272xbsw.$playbackdesktop.0.$overlay"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="position:absolute;width:196px;top:0;bottom:0;left:calc((100% - 196px) * 0.5);" id="comp-j272xbswinlineContent" class="strc1inlineContent" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh.$inlineContent.$comp-j272xbsw/=1$comp-j272xbsw.$inlineContent">
+                                                            <div style="left: 2px; width: 193px; position: absolute; top: 78px;" class="txtNew" id="comp-j272xbt1" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh.$inlineContent.$comp-j272xbsw/=1$comp-j272xbsw.$inlineContent.$comp-j272xbt1">
+                                                                <h2 class="font_2" style="font-size:18px; line-height:1.2em; text-align:center;"><span class="color_14"><span style="font-size:18px;"><span style="font-family:lulo-clean-w01-one-bold,sans-serif;"><span style="letter-spacing:0em;">Business Prospectus</span></span></span></span></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="position: absolute; left: calc(196px); width: 294px; top: 0px; height: 204px;" class="strc1" id="comp-j272xbt4" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh.$inlineContent.$comp-j272xbt4/=1$comp-j272xbt4">
+                                                        <div style="position: absolute; top: 0px; width: calc(294px); height: 100%; pointer-events: auto; left: calc(0px); bottom: 0px; overflow: hidden; clip: rect(0px 294px 204px 0px);" data-enable-video="true" class="strc1balata" id="comp-j272xbt4balata" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh.$inlineContent.$comp-j272xbt4/=1$comp-j272xbt4.$playbackdesktop">
+                                                            <div style="position:absolute;width:100%;height:100%;" class="bgColor" id="comp-j272xbt4balatabgcolor" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh.$inlineContent.$comp-j272xbt4/=1$comp-j272xbt4.$playbackdesktop.0">
+                                                                <div style="width:100%;height:100%;position:absolute;background-color:rgba(252, 131, 66, 0.85);" id="comp-j272xbt4balatabgcoloroverlay" class="bgColoroverlay" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh.$inlineContent.$comp-j272xbt4/=1$comp-j272xbt4.$playbackdesktop.0.$overlay"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="position:absolute;width:294px;top:0;bottom:0;left:calc((100% - 294px) * 0.5);" id="comp-j272xbt4inlineContent" class="strc1inlineContent" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh.$inlineContent.$comp-j272xbt4/=1$comp-j272xbt4.$inlineContent">
+                                                            <div style="left: 7px; width: 280px; position: absolute; top: 23px;" class="txtNew" id="comp-j272xbta" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh.$inlineContent.$comp-j272xbt4/=1$comp-j272xbt4.$inlineContent.$comp-j272xbta">
+                                                                <p class="font_8" style="font-size:16px; line-height:1.4em; text-align:justify;"><span class="color_11"><span style="font-size:16px;"><span style="font-family:avenir-lt-w01_35-light1475496,sans-serif;">Based on the existing business model and future business direction, we undertake space planning and design for supply chain facilities. This ensures scalability and sustainability of operations&nbsp;valid for the next 5 years and beyond.</span></span>
+                                                                    </span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="position: absolute; left: calc(490px); width: 198px; top: 0px; height: 204px;" class="strc1" id="comp-j272xbtd" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh.$inlineContent.$comp-j272xbtd/=1$comp-j272xbtd">
+                                                        <div style="position: absolute; top: 0px; width: calc(198px); height: 100%; pointer-events: auto; left: calc(0px); bottom: 0px; overflow: hidden; clip: rect(0px 198px 204px 0px);" data-enable-video="true" class="strc1balata" id="comp-j272xbtdbalata" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh.$inlineContent.$comp-j272xbtd/=1$comp-j272xbtd.$playbackdesktop">
+                                                            <div style="position:absolute;width:100%;height:100%;" class="bgColor" id="comp-j272xbtdbalatabgcolor" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh.$inlineContent.$comp-j272xbtd/=1$comp-j272xbtd.$playbackdesktop.0">
+                                                                <div style="width:100%;height:100%;position:absolute;background-color:rgba(237, 237, 237, 1);" id="comp-j272xbtdbalatabgcoloroverlay" class="bgColoroverlay" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh.$inlineContent.$comp-j272xbtd/=1$comp-j272xbtd.$playbackdesktop.0.$overlay"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="position:absolute;width:198px;top:0;bottom:0;left:calc((100% - 198px) * 0.5);" id="comp-j272xbtdinlineContent" class="strc1inlineContent" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh.$inlineContent.$comp-j272xbtd/=1$comp-j272xbtd.$inlineContent">
+                                                            <div style="left: 2px; width: 194px; position: absolute; top: 67px;" class="txtNew" id="comp-j272xbti" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh.$inlineContent.$comp-j272xbtd/=1$comp-j272xbtd.$inlineContent.$comp-j272xbti">
+                                                                <h2 class="font_2" style="font-size:18px; line-height:1.2em; text-align:center;"><span style="font-size:18px;"><span class="color_14"><span style="font-family:lulo-clean-w01-one-bold,sans-serif;"><span style="letter-spacing:0em;">Central Kitchen Setup</span></span></span></span><span class="color_14"><span style="font-size:18px;"><span style="font-family:lulo-clean-w01-one-bold,sans-serif;"><span style="letter-spacing:0em;"> </span></span></span></span></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="position: absolute; left: calc(688px); width: 292px; top: 0px; height: 204px;" class="strc1" id="comp-j272xbtl" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh.$inlineContent.$comp-j272xbtl/=1$comp-j272xbtl">
+                                                        <div style="position: absolute; top: 0px; width: calc(292px); height: 100%; pointer-events: auto; left: calc(0px); bottom: 0px; overflow: hidden; clip: rect(0px 292px 204px 0px);" data-enable-video="true" class="strc1balata" id="comp-j272xbtlbalata" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh.$inlineContent.$comp-j272xbtl/=1$comp-j272xbtl.$playbackdesktop">
+                                                            <div style="position:absolute;width:100%;height:100%;" class="bgColor" id="comp-j272xbtlbalatabgcolor" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh.$inlineContent.$comp-j272xbtl/=1$comp-j272xbtl.$playbackdesktop.0">
+                                                                <div style="width:100%;height:100%;position:absolute;background-color:rgba(252, 131, 66, 0.85);" id="comp-j272xbtlbalatabgcoloroverlay" class="bgColoroverlay" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh.$inlineContent.$comp-j272xbtl/=1$comp-j272xbtl.$playbackdesktop.0.$overlay"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="position:absolute;width:292px;top:0;bottom:0;left:calc((100% - 292px) * 0.5);" id="comp-j272xbtlinlineContent" class="strc1inlineContent" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh.$inlineContent.$comp-j272xbtl/=1$comp-j272xbtl.$inlineContent">
+                                                            <div style="left: 5px; width: 280px; position: absolute; top: 23px;" class="txtNew" id="comp-j272xbtm1" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbsh.$inlineContent.$comp-j272xbtl/=1$comp-j272xbtl.$inlineContent.$comp-j272xbtm1">
+                                                                <p class="font_8" style="font-size:16px; line-height:1.4em; text-align:justify;"><span style="font-size:16px;"><span class="color_11"><span style="font-family:avenir-lt-w01_35-light1475496,sans-serif;">A key foundation building block for growing food businesses, this&nbsp;unlocks economies of scale. Streamlined production, automation, and quality control will reduce operational burden, labour and food cost at outlets while improving revenue.</span></span>
+                                                                    </span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section style="width: 980px; position: absolute; top: 447px; height: 203px; left: 0px;" class="strc1" id="comp-j272xbtp" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp">
+                                                <div style="position: absolute; top: 0px; width: calc(980px); height: 100%; pointer-events: auto; bottom: 0px; left: calc(0px); right: calc(980px); overflow: hidden; clip: rect(0px 980px 203px 0px);" data-enable-video="true" class="strc1balata" id="comp-j272xbtpbalata" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp.$playbackdesktop">
+                                                    <div style="position:absolute;width:100%;height:100%;" class="bgColor" id="comp-j272xbtpbalatabgcolor" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp.$playbackdesktop.0">
+                                                        <div style="width:100%;height:100%;position:absolute;background-color:transparent;" id="comp-j272xbtpbalatabgcoloroverlay" class="bgColoroverlay" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp.$playbackdesktop.0.$overlay"></div>
+                                                    </div>
+                                                </div>
+                                                <div id="comp-j272xbtpinlineContent" class="strc1inlineContent" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp.$inlineContent">
+                                                    <div style="position: absolute; left: calc(0px); width: 196px; top: 0px; height: 203px;" class="strc1" id="comp-j272xbtt" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp.$inlineContent.$comp-j272xbtt/=1$comp-j272xbtt">
+                                                        <div style="position: absolute; top: 0px; width: calc(196px); height: 100%; pointer-events: auto; left: calc(0px); bottom: 0px; overflow: hidden; clip: rect(0px 196px 203px 0px);" data-enable-video="true" class="strc1balata" id="comp-j272xbttbalata" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp.$inlineContent.$comp-j272xbtt/=1$comp-j272xbtt.$playbackdesktop">
+                                                            <div style="position:absolute;width:100%;height:100%;" class="bgColor" id="comp-j272xbttbalatabgcolor" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp.$inlineContent.$comp-j272xbtt/=1$comp-j272xbtt.$playbackdesktop.0">
+                                                                <div style="width:100%;height:100%;position:absolute;background-color:rgba(255, 255, 255, 0.9);" id="comp-j272xbttbalatabgcoloroverlay" class="bgColoroverlay" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp.$inlineContent.$comp-j272xbtt/=1$comp-j272xbtt.$playbackdesktop.0.$overlay"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="position:absolute;width:196px;top:0;bottom:0;left:calc((100% - 196px) * 0.5);" id="comp-j272xbttinlineContent" class="strc1inlineContent" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp.$inlineContent.$comp-j272xbtt/=1$comp-j272xbtt.$inlineContent">
+                                                            <div style="left: 4px; width: 190px; position: absolute; top: 79px;" class="txtNew" id="comp-j272xbtx" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp.$inlineContent.$comp-j272xbtt/=1$comp-j272xbtt.$inlineContent.$comp-j272xbtx">
+                                                                <h2 class="font_2" style="font-size:17px; line-height:1.2em; text-align:center;"><span style="font-size:17px;"><span class="color_14"><span style="font-family:lulo-clean-w01-one-bold,sans-serif;"><span style="letter-spacing:0em;">Technology Integration </span></span></span></span></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="position: absolute; left: calc(196px); width: 294px; top: 0px; height: 203px;" class="strc1" id="comp-j272xbu1" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp.$inlineContent.$comp-j272xbu1/=1$comp-j272xbu1">
+                                                        <div style="position: absolute; top: 0px; width: calc(294px); height: 100%; pointer-events: auto; left: calc(0px); bottom: 0px; overflow: hidden; clip: rect(0px 294px 203px 0px);" data-enable-video="true" class="strc1balata" id="comp-j272xbu1balata" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp.$inlineContent.$comp-j272xbu1/=1$comp-j272xbu1.$playbackdesktop">
+                                                            <div style="position:absolute;width:100%;height:100%;" class="bgColor" id="comp-j272xbu1balatabgcolor" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp.$inlineContent.$comp-j272xbu1/=1$comp-j272xbu1.$playbackdesktop.0">
+                                                                <div style="width:100%;height:100%;position:absolute;background-color:rgba(252, 131, 66, 0.85);" id="comp-j272xbu1balatabgcoloroverlay" class="bgColoroverlay" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp.$inlineContent.$comp-j272xbu1/=1$comp-j272xbu1.$playbackdesktop.0.$overlay"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="position:absolute;width:294px;top:0;bottom:0;left:calc((100% - 294px) * 0.5);" id="comp-j272xbu1inlineContent" class="strc1inlineContent" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp.$inlineContent.$comp-j272xbu1/=1$comp-j272xbu1.$inlineContent">
+                                                            <div style="left: 7px; width: 280px; position: absolute; top: 23px;" class="txtNew" id="comp-j272xbu5" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp.$inlineContent.$comp-j272xbu1/=1$comp-j272xbu1.$inlineContent.$comp-j272xbu5">
+                                                                <p class="font_8" style="font-size:16px; line-height:1.4em; text-align:justify;"><span style="font-size:16px;"><span class="color_11"><span style="font-family:avenir-lt-w01_35-light1475496,sans-serif;">Modern supply chains are commonly tied to Enterprise Resource Planning (ERP) systems to centralise their inventory. ERP systems log&nbsp;central kitchen&nbsp;activities,&nbsp;generate&nbsp;data insights and&nbsp;real-time&nbsp;feedback which support&nbsp;business decisions.</span></span>
+                                                                    </span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="position: absolute; left: calc(490px); width: 198px; top: 0px; height: 203px;" class="strc1" id="comp-j272xbuc" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp.$inlineContent.$comp-j272xbuc/=1$comp-j272xbuc">
+                                                        <div style="position: absolute; top: 0px; width: calc(198px); height: 100%; pointer-events: auto; left: calc(0px); bottom: 0px; overflow: hidden; clip: rect(0px 198px 203px 0px);" data-enable-video="true" class="strc1balata" id="comp-j272xbucbalata" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp.$inlineContent.$comp-j272xbuc/=1$comp-j272xbuc.$playbackdesktop">
+                                                            <div style="position:absolute;width:100%;height:100%;" class="bgColor" id="comp-j272xbucbalatabgcolor" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp.$inlineContent.$comp-j272xbuc/=1$comp-j272xbuc.$playbackdesktop.0">
+                                                                <div style="width:100%;height:100%;position:absolute;background-color:rgba(237, 237, 237, 1);" id="comp-j272xbucbalatabgcoloroverlay" class="bgColoroverlay" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp.$inlineContent.$comp-j272xbuc/=1$comp-j272xbuc.$playbackdesktop.0.$overlay"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="position:absolute;width:198px;top:0;bottom:0;left:calc((100% - 198px) * 0.5);" id="comp-j272xbucinlineContent" class="strc1inlineContent" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp.$inlineContent.$comp-j272xbuc/=1$comp-j272xbuc.$inlineContent">
+                                                            <div style="left: 2px; width: 194px; position: absolute; top: 58px;" class="txtNew" id="comp-j272xbue" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp.$inlineContent.$comp-j272xbuc/=1$comp-j272xbuc.$inlineContent.$comp-j272xbue">
+                                                                <h2 class="font_2" style="font-size:17px; line-height:1.2em; text-align:center;"><span style="font-size:17px;"><span class="color_14"><span style="font-family:lulo-clean-w01-one-bold,sans-serif;"><span style="letter-spacing:0em;">Inbound</span></span></span></span></h2>
+
+                                                                <h2 class="font_2" style="font-size:17px; line-height:1.2em; text-align:center;"><span style="font-size:17px;"><span class="color_14"><span style="font-family:lulo-clean-w01-one-bold,sans-serif;"><span style="letter-spacing:0em;">and Outbound Logistics</span></span></span></span></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="position: absolute; left: calc(688px); width: 292px; top: 0px; height: 203px;" class="strc1" id="comp-j272xbug" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp.$inlineContent.$comp-j272xbug/=1$comp-j272xbug">
+                                                        <div style="position: absolute; top: 0px; width: calc(292px); height: 100%; pointer-events: auto; left: calc(0px); bottom: 0px; overflow: hidden; clip: rect(0px 292px 203px 0px);" data-enable-video="true" class="strc1balata" id="comp-j272xbugbalata" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp.$inlineContent.$comp-j272xbug/=1$comp-j272xbug.$playbackdesktop">
+                                                            <div style="position:absolute;width:100%;height:100%;" class="bgColor" id="comp-j272xbugbalatabgcolor" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp.$inlineContent.$comp-j272xbug/=1$comp-j272xbug.$playbackdesktop.0">
+                                                                <div style="width:100%;height:100%;position:absolute;background-color:rgba(252, 131, 66, 0.85);" id="comp-j272xbugbalatabgcoloroverlay" class="bgColoroverlay" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp.$inlineContent.$comp-j272xbug/=1$comp-j272xbug.$playbackdesktop.0.$overlay"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="position:absolute;width:292px;top:0;bottom:0;left:calc((100% - 292px) * 0.5);" id="comp-j272xbuginlineContent" class="strc1inlineContent" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp.$inlineContent.$comp-j272xbug/=1$comp-j272xbug.$inlineContent">
+                                                            <div style="left: 5px; width: 280px; position: absolute; top: 23px;" class="txtNew" id="comp-j272xbui" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbtp.$inlineContent.$comp-j272xbug/=1$comp-j272xbug.$inlineContent.$comp-j272xbui">
+                                                                <p class="font_8" style="font-size:16px; line-height:1.4em; text-align:justify;"><span style="font-size:16px;"><span class="color_11"><span style="font-family:avenir-lt-w01_35-light1475496,sans-serif;">Setting up a logistics network involves procurement (inbound) and delivery (outbound). Procurement allows for bulk discounts and ready access to raw ingredients, while a delivery network securely transports end products to outlets.</span></span>
+                                                                    </span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section style="width: 980px; position: absolute; top: 651px; height: 203px; left: 0px;" class="strc1" id="comp-j272xbul" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul">
+                                                <div style="position: absolute; top: 0px; width: calc(980px); height: 100%; pointer-events: auto; bottom: 0px; left: calc(0px); right: calc(980px); overflow: hidden; clip: rect(0px 980px 203px 0px);" data-enable-video="true" class="strc1balata" id="comp-j272xbulbalata" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul.$playbackdesktop">
+                                                    <div style="position:absolute;width:100%;height:100%;" class="bgColor" id="comp-j272xbulbalatabgcolor" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul.$playbackdesktop.0">
+                                                        <div style="width:100%;height:100%;position:absolute;background-color:transparent;" id="comp-j272xbulbalatabgcoloroverlay" class="bgColoroverlay" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul.$playbackdesktop.0.$overlay"></div>
+                                                    </div>
+                                                </div>
+                                                <div id="comp-j272xbulinlineContent" class="strc1inlineContent" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul.$inlineContent">
+                                                    <div style="position: absolute; left: calc(0px); width: 196px; top: 0px; height: 203px;" class="strc1" id="comp-j272xbuo" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul.$inlineContent.$comp-j272xbuo/=1$comp-j272xbuo">
+                                                        <div style="position: absolute; top: 0px; width: calc(196px); height: 100%; pointer-events: auto; left: calc(0px); bottom: 0px; overflow: hidden; clip: rect(0px 196px 203px 0px);" data-enable-video="true" class="strc1balata" id="comp-j272xbuobalata" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul.$inlineContent.$comp-j272xbuo/=1$comp-j272xbuo.$playbackdesktop">
+                                                            <div style="position:absolute;width:100%;height:100%;" class="bgColor" id="comp-j272xbuobalatabgcolor" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul.$inlineContent.$comp-j272xbuo/=1$comp-j272xbuo.$playbackdesktop.0">
+                                                                <div style="width:100%;height:100%;position:absolute;background-color:rgba(255, 255, 255, 0.9);" id="comp-j272xbuobalatabgcoloroverlay" class="bgColoroverlay" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul.$inlineContent.$comp-j272xbuo/=1$comp-j272xbuo.$playbackdesktop.0.$overlay"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="position:absolute;width:196px;top:0;bottom:0;left:calc((100% - 196px) * 0.5);" id="comp-j272xbuoinlineContent" class="strc1inlineContent" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul.$inlineContent.$comp-j272xbuo/=1$comp-j272xbuo.$inlineContent">
+                                                            <div style="left: 4px; width: 190px; position: absolute; top: 68px;" class="txtNew" id="comp-j272xbuq1" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul.$inlineContent.$comp-j272xbuo/=1$comp-j272xbuo.$inlineContent.$comp-j272xbuq1">
+                                                                <h2 class="font_2" style="font-size:17px; line-height:1.2em; text-align:center;"><span style="font-size:15px;"><span class="color_14"><span style="font-family:lulo-clean-w01-one-bold,sans-serif;"><span style="letter-spacing:0em;">Standardising Operating Procedures</span></span></span></span></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="position: absolute; left: calc(196px); width: 294px; top: 0px; height: 203px;" class="strc1" id="comp-j272xbuv" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul.$inlineContent.$comp-j272xbuv/=1$comp-j272xbuv">
+                                                        <div style="position: absolute; top: 0px; width: calc(294px); height: 100%; pointer-events: auto; left: calc(0px); bottom: 0px; overflow: hidden; clip: rect(0px 294px 203px 0px);" data-enable-video="true" class="strc1balata" id="comp-j272xbuvbalata" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul.$inlineContent.$comp-j272xbuv/=1$comp-j272xbuv.$playbackdesktop">
+                                                            <div style="position:absolute;width:100%;height:100%;" class="bgColor" id="comp-j272xbuvbalatabgcolor" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul.$inlineContent.$comp-j272xbuv/=1$comp-j272xbuv.$playbackdesktop.0">
+                                                                <div style="width:100%;height:100%;position:absolute;background-color:rgba(252, 131, 66, 0.85);" id="comp-j272xbuvbalatabgcoloroverlay" class="bgColoroverlay" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul.$inlineContent.$comp-j272xbuv/=1$comp-j272xbuv.$playbackdesktop.0.$overlay"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="position:absolute;width:294px;top:0;bottom:0;left:calc((100% - 294px) * 0.5);" id="comp-j272xbuvinlineContent" class="strc1inlineContent" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul.$inlineContent.$comp-j272xbuv/=1$comp-j272xbuv.$inlineContent">
+                                                            <div style="left: 7px; width: 280px; position: absolute; top: 23px;" class="txtNew" id="comp-j272xbux" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul.$inlineContent.$comp-j272xbuv/=1$comp-j272xbuv.$inlineContent.$comp-j272xbux">
+                                                                <p class="font_8" style="font-size:16px; line-height:1.4em; text-align:justify;"><span style="font-size:16px;"><span class="color_11"><span style="font-family:avenir-lt-w01_35-light1475496,sans-serif;">Strong operations form the backbone of every food supply chain. With a deep understanding of the F&amp;B sector, we utilise industry best practices, Standard Operating Procedures, Corporate Policy, and workflow to streamline operations.</span></span>
+                                                                    </span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="position: absolute; left: calc(490px); width: 198px; top: 0px; height: 203px;" class="strc1" id="comp-j272xbv2" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul.$inlineContent.$comp-j272xbv2/=1$comp-j272xbv2">
+                                                        <div style="position: absolute; top: 0px; width: calc(198px); height: 100%; pointer-events: auto; left: calc(0px); bottom: 0px; overflow: hidden; clip: rect(0px 198px 203px 0px);" data-enable-video="true" class="strc1balata" id="comp-j272xbv2balata" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul.$inlineContent.$comp-j272xbv2/=1$comp-j272xbv2.$playbackdesktop">
+                                                            <div style="position:absolute;width:100%;height:100%;" class="bgColor" id="comp-j272xbv2balatabgcolor" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul.$inlineContent.$comp-j272xbv2/=1$comp-j272xbv2.$playbackdesktop.0">
+                                                                <div style="width:100%;height:100%;position:absolute;background-color:rgba(237, 237, 237, 1);" id="comp-j272xbv2balatabgcoloroverlay" class="bgColoroverlay" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul.$inlineContent.$comp-j272xbv2/=1$comp-j272xbv2.$playbackdesktop.0.$overlay"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="position:absolute;width:198px;top:0;bottom:0;left:calc((100% - 198px) * 0.5);" id="comp-j272xbv2inlineContent" class="strc1inlineContent" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul.$inlineContent.$comp-j272xbv2/=1$comp-j272xbv2.$inlineContent">
+                                                            <div style="left: 2px; width: 194px; position: absolute; top: 79px;" class="txtNew" id="comp-j272xbv32" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul.$inlineContent.$comp-j272xbv2/=1$comp-j272xbv2.$inlineContent.$comp-j272xbv32">
+                                                                <h2 class="font_2" style="font-size:17px; line-height:1.2em; text-align:center;"><span style="font-size:17px;"><span class="color_14"><span style="font-family:lulo-clean-w01-one-bold,sans-serif;"><span style="letter-spacing:0em;">Financial Modelling</span></span></span></span></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div style="position: absolute; left: calc(688px); width: 292px; top: 0px; height: 203px;" class="strc1" id="comp-j272xbv5" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul.$inlineContent.$comp-j272xbv5/=1$comp-j272xbv5">
+                                                        <div style="position: absolute; top: 0px; width: calc(292px); height: 100%; pointer-events: auto; left: calc(0px); bottom: 0px; overflow: hidden; clip: rect(0px 292px 203px 0px);" data-enable-video="true" class="strc1balata" id="comp-j272xbv5balata" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul.$inlineContent.$comp-j272xbv5/=1$comp-j272xbv5.$playbackdesktop">
+                                                            <div style="position:absolute;width:100%;height:100%;" class="bgColor" id="comp-j272xbv5balatabgcolor" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul.$inlineContent.$comp-j272xbv5/=1$comp-j272xbv5.$playbackdesktop.0">
+                                                                <div style="width:100%;height:100%;position:absolute;background-color:rgba(252, 131, 66, 0.85);" id="comp-j272xbv5balatabgcoloroverlay" class="bgColoroverlay" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul.$inlineContent.$comp-j272xbv5/=1$comp-j272xbv5.$playbackdesktop.0.$overlay"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="position:absolute;width:292px;top:0;bottom:0;left:calc((100% - 292px) * 0.5);" id="comp-j272xbv5inlineContent" class="strc1inlineContent" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul.$inlineContent.$comp-j272xbv5/=1$comp-j272xbv5.$inlineContent">
+                                                            <div style="left: 5px; width: 280px; position: absolute; top: 23px;" class="txtNew" id="comp-j272xbv8" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.$centeredContent.$inlineContent.$SITE_PAGES.$i4e81_DESKTOP.$inlineContent.$comp-j272xbul.$inlineContent.$comp-j272xbv5/=1$comp-j272xbv5.$inlineContent.$comp-j272xbv8">
+                                                                <p class="font_8" style="font-size:16px; line-height:1.4em; text-align:justify;"><span style="font-size:16px;"><span class="color_11"><span style="font-family:avenir-lt-w01_35-light1475496,sans-serif;">To accurately project sustainability and return on investment, our financial modelling is based&nbsp;off&nbsp;business operations and consists of capital outlay, revenue projection, labour forecasts, expenses, and cost control measures to minimise expenses.</span></span>
+                                                                    </span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="width: 39px; top: 0px; bottom: 0px; left: 30px; position: fixed; margin: auto; z-index: 50; height: 146px;" class="lb1" id="comp-j3ze7pou" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$comp-j3ze7pou">
+                        <ul aria-label="Social bar" id="comp-j3ze7pouitemsContainer" class="lb1itemsContainer" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$comp-j3ze7pou.$itemsContainer">
+                            <li style="width:39px;height:39px;margin-bottom:14px;margin-right:0;display:block;" class="lb1imageItem" id="comp-j3ze7pou0image" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$comp-j3ze7pou.$itemsContainer.0">
+                                <a href="https://www.facebook.com/" target="_blank" data-content="https://www.facebook.com/" data-type="external" id="comp-j3ze7pou0imagelink" class="lb1imageItemlink" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$comp-j3ze7pou.$itemsContainer.0.$link">
+                                    <div id="comp-j3ze7pou0imageimage" style="position: absolute; width: 39px; height: 39px;" data-style="position:absolute" class="lb1imageItemimage" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$comp-j3ze7pou.$itemsContainer.0.$link.0">
+                                        <div class="lb1imageItemimagepreloader" id="comp-j3ze7pou0imageimagepreloader" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$comp-j3ze7pou.$itemsContainer.0.$link.0.$preloader"></div><img id="comp-j3ze7pou0imageimageimage" alt="Facebook Social Icon" data-type="image" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$comp-j3ze7pou.$itemsContainer.0.$link.0.$image" src="http://anzeh.com/franchise-dev/images/icon/facebook-icon.png" style="width: 39px; height: 39px; object-fit: cover;">
+                                    </div>
+                                </a>
+                            </li>
+                            <li style="width:39px;height:39px;margin-bottom:14px;margin-right:0;display:block;" class="lb1imageItem" id="comp-j3ze7pou1image" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$comp-j3ze7pou.$itemsContainer.1">
+                                <a href="https://www.instagram.com/" target="_blank" data-content="https://www.instagram.com/" data-type="external" id="comp-j3ze7pou1imagelink" class="lb1imageItemlink" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$comp-j3ze7pou.$itemsContainer.1.$link">
+                                    <div id="comp-j3ze7pou1imageimage" style="position: absolute; width: 39px; height: 39px;" data-style="position:absolute" class="lb1imageItemimage" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$comp-j3ze7pou.$itemsContainer.1.$link.0">
+                                        <div class="lb1imageItemimagepreloader" id="comp-j3ze7pou1imageimagepreloader" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$comp-j3ze7pou.$itemsContainer.1.$link.0.$preloader"></div><img id="comp-j3ze7pou1imageimageimage" alt="Instagram Social Icon" data-type="image" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$comp-j3ze7pou.$itemsContainer.1.$link.0.$image" src="http://anzeh.com/franchise-dev/images/icon/instagram-icon.png" style="width: 39px; height: 39px; object-fit: cover;">
+                                    </div>
+                                </a>
+                            </li>
+                            <li style="width:39px;height:39px;margin-bottom:14px;margin-right:0;display:block;" class="lb1imageItem" id="comp-j3ze7pou2image" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$comp-j3ze7pou.$itemsContainer.2">
+                                <a href="https://www.linkedin.com" target="_blank" data-content="https://www.linkedin.com" data-type="external" id="comp-j3ze7pou2imagelink" class="lb1imageItemlink" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$comp-j3ze7pou.$itemsContainer.2.$link">
+                                    <div id="comp-j3ze7pou2imageimage" style="position: absolute; width: 39px; height: 39px;" data-style="position:absolute" class="lb1imageItemimage" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$comp-j3ze7pou.$itemsContainer.2.$link.0">
+                                        <div class="lb1imageItemimagepreloader" id="comp-j3ze7pou2imageimagepreloader" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$comp-j3ze7pou.$itemsContainer.2.$link.0.$preloader"></div><img id="comp-j3ze7pou2imageimageimage" alt="LinkedIn Social Icon" data-type="image" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$comp-j3ze7pou.$itemsContainer.2.$link.0.$image" src="http://anzeh.com/franchise-dev/images/icon/linkedin-icon.png" style="width: 39px; height: 39px; object-fit: cover;">
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
